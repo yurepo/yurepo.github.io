@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Coding 筆記</title>
-    <link>https://yurepo.github.com/tags/java/</link>
+    <link>https://yurepo.github.io/tags/java/</link>
     <description>Recent content in Java on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Sep 2020 22:23:28 +0000</lastBuildDate><atom:link href="https://yurepo.github.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2020 22:23:28 +0000</lastBuildDate><atom:link href="https://yurepo.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring WebFlux 應用開發</title>
-      <link>https://yurepo.github.com/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
+      <link>https://yurepo.github.io/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
       <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
+      <guid>https://yurepo.github.io/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
       <description>使用Spring WebFlux保護您的網站應用(驗證篇) 相信瀏覽到這個Topic的各位一定都對 Reactive 有相當的認識了，本文章將專注在講解 WebFlux &amp;amp; Reactive Security的應用開發，其餘基礎便不再贅述。
 首先我們需要到 Spring Initializr 產生我們的Spring WebFlux Application。
 本文章需要的依賴有：Spring Reactive Web、Spring Security、Spring Configuration Processor(可選) *文章撰寫時 Spring 版本為 2.4.0(M2)，依據版本更新有些地方會稍稍不同。 接下來使用您喜歡的IDE去做開發，本文將使用Intellij IDEA開發
@@ -22,10 +22,10 @@ dependencies { // jwt dependency implementation(&amp;quot;com.auth0:java-jwt:3.1
     
     <item>
       <title>HelloWorld | JVM</title>
-      <link>https://yurepo.github.com/2020/08/helloworld-jvm/</link>
+      <link>https://yurepo.github.io/2020/08/helloworld-jvm/</link>
       <pubDate>Sat, 01 Aug 2020 00:43:58 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/2020/08/helloworld-jvm/</guid>
+      <guid>https://yurepo.github.io/2020/08/helloworld-jvm/</guid>
       <description>HelloWorld | JVM 因為是部落格上的第一篇，所以想來測試基本語法高亮 首先是Java
 // 測試Java註解 public static void main(string[] args){ System.out.println(&amp;#34;hello world&amp;#34;); } 接下來是Kotlin
 fun main(){ &amp;#34;hello world&amp;#34;.println() } fun String.println(){ println(this) } 最後基本的C語言好了

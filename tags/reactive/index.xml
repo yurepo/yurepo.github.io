@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reactive on Coding 筆記</title>
-    <link>https://yurepo.github.com/tags/reactive/</link>
+    <link>https://yurepo.github.io/tags/reactive/</link>
     <description>Recent content in Reactive on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Oct 2020 19:13:40 +0000</lastBuildDate><atom:link href="https://yurepo.github.com/tags/reactive/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Oct 2020 19:13:40 +0000</lastBuildDate><atom:link href="https://yurepo.github.io/tags/reactive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring Security 02 - Security Context? 從哪來?</title>
-      <link>https://yurepo.github.com/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</link>
+      <link>https://yurepo.github.io/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</link>
       <pubDate>Thu, 08 Oct 2020 19:13:40 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</guid>
+      <guid>https://yurepo.github.io/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</guid>
       <description>上回我們說了SecurityContextHolder主要在做什麼，這回主要討論的是，SecurityContext到底是何方神聖，它從何而來。
 SecurityContext它作為 Spring Security 核心中的一部分，它的作用可說是非常重要的。我們來看看SecurityContext的源碼。
 public interface SecurityContext extends Serializable { /** * 獲取當前已驗證的身分或驗證請求令牌 * * @return the &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no authentication * information is available */ Authentication getAuthentication(); /** * 改變目前已驗證的身分或刪除驗證資料 * * @param authentication the new &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; token, or * &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no further authentication information should be stored */ void setAuthentication(Authentication authentication); } 可以看到SecurityContext主要是在管理Authentication的物件，那這個Authentication主要是存放當前使用者的身分(廢話)、存放是否已驗證以及取得目前使用者擁有的權限。
@@ -22,10 +22,10 @@ public interface SecurityContext extends Serializable { /** * 獲取當前已驗
     
     <item>
       <title>Spring Security 01 - 關於 ReactiveSecurityContextHolder 的一兩件事</title>
-      <link>https://yurepo.github.com/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</link>
+      <link>https://yurepo.github.io/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</link>
       <pubDate>Tue, 06 Oct 2020 22:28:18 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</guid>
+      <guid>https://yurepo.github.io/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</guid>
       <description>Spring Security對於寫過Spring Boot的人應該是再熟悉不過了，這篇文主要紀錄我對於 ReactiveSecurityContextHolder的理解，原始碼版本為5.4.0-RC1。
 在聊原始碼前，我想先聊一下Context到底是什麼。
 Context，中文譯作「上下文」，我對於上下文的理解就是物件作用的環境。

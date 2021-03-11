@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C# on Coding 筆記</title>
-    <link>https://yurepo.github.com/tags/c#/</link>
+    <link>https://yurepo.github.io/tags/c#/</link>
     <description>Recent content in C# on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Aug 2020 22:06:23 +0000</lastBuildDate><atom:link href="https://yurepo.github.com/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Aug 2020 22:06:23 +0000</lastBuildDate><atom:link href="https://yurepo.github.io/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>回頭看當年技藝競賽題目</title>
-      <link>https://yurepo.github.com/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</link>
+      <link>https://yurepo.github.io/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</link>
       <pubDate>Wed, 05 Aug 2020 22:06:23 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</guid>
+      <guid>https://yurepo.github.io/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</guid>
       <description>這幾天在準備上課教材，所以回頭做了一些技藝競賽的歷屆考題 我還記得以前有一題在我高中的時候花了將近幾天在想答案，回去重做發現&amp;hellip;&amp;hellip;
 什麼鬼???不就只是遞迴而已&amp;hellip; 重寫後發現猜想真的是對的，可能當時練習的時候頭腦有點混亂吧，原本是寫了三、四個迴圈在裡面跑，有些數字還會直接當掉不給動只能說當時太笨了&amp;hellip; 希望回去學校教的時候學弟不要太聰明，不然當時的我會站不了檯面阿阿阿。 因為太丟人了程式碼就不放上來了。</description>
     </item>

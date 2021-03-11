@@ -2,106 +2,106 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Coding 筆記</title>
-    <link>https://yurepo.github.com/tags/</link>
+    <link>https://yurepo.github.io/tags/</link>
     <description>Recent content in Tags on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Oct 2020 19:13:40 +0000</lastBuildDate><atom:link href="https://yurepo.github.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Oct 2020 19:13:40 +0000</lastBuildDate><atom:link href="https://yurepo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reactive</title>
-      <link>https://yurepo.github.com/tags/reactive/</link>
+      <link>https://yurepo.github.io/tags/reactive/</link>
       <pubDate>Thu, 08 Oct 2020 19:13:40 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/reactive/</guid>
+      <guid>https://yurepo.github.io/tags/reactive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spring Security</title>
-      <link>https://yurepo.github.com/tags/spring-security/</link>
+      <link>https://yurepo.github.io/tags/spring-security/</link>
       <pubDate>Thu, 08 Oct 2020 19:13:40 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/spring-security/</guid>
+      <guid>https://yurepo.github.io/tags/spring-security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://yurepo.github.com/tags/java/</link>
+      <link>https://yurepo.github.io/tags/java/</link>
       <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/java/</guid>
+      <guid>https://yurepo.github.io/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JVM</title>
-      <link>https://yurepo.github.com/tags/jvm/</link>
+      <link>https://yurepo.github.io/tags/jvm/</link>
       <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/jvm/</guid>
+      <guid>https://yurepo.github.io/tags/jvm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kotlin</title>
-      <link>https://yurepo.github.com/tags/kotlin/</link>
+      <link>https://yurepo.github.io/tags/kotlin/</link>
       <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/kotlin/</guid>
+      <guid>https://yurepo.github.io/tags/kotlin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spring Framework</title>
-      <link>https://yurepo.github.com/tags/spring-framework/</link>
+      <link>https://yurepo.github.io/tags/spring-framework/</link>
       <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/spring-framework/</guid>
+      <guid>https://yurepo.github.io/tags/spring-framework/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ヨルシカ</title>
-      <link>https://yurepo.github.com/tags/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB/</link>
+      <link>https://yurepo.github.io/tags/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB/</link>
       <pubDate>Thu, 13 Aug 2020 20:45:46 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB/</guid>
+      <guid>https://yurepo.github.io/tags/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>日文</title>
-      <link>https://yurepo.github.com/tags/%E6%97%A5%E6%96%87/</link>
+      <link>https://yurepo.github.io/tags/%E6%97%A5%E6%96%87/</link>
       <pubDate>Thu, 13 Aug 2020 20:45:46 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/%E6%97%A5%E6%96%87/</guid>
+      <guid>https://yurepo.github.io/tags/%E6%97%A5%E6%96%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C#</title>
-      <link>https://yurepo.github.com/tags/c#/</link>
+      <link>https://yurepo.github.io/tags/c#/</link>
       <pubDate>Wed, 05 Aug 2020 22:06:23 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/c#/</guid>
+      <guid>https://yurepo.github.io/tags/c#/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LeetCode</title>
-      <link>https://yurepo.github.com/tags/leetcode/</link>
+      <link>https://yurepo.github.io/tags/leetcode/</link>
       <pubDate>Mon, 03 Aug 2020 22:02:41 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/leetcode/</guid>
+      <guid>https://yurepo.github.io/tags/leetcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C</title>
-      <link>https://yurepo.github.com/tags/c/</link>
+      <link>https://yurepo.github.io/tags/c/</link>
       <pubDate>Sat, 01 Aug 2020 00:43:58 +0000</pubDate>
       
-      <guid>https://yurepo.github.com/tags/c/</guid>
+      <guid>https://yurepo.github.io/tags/c/</guid>
       <description></description>
     </item>
     

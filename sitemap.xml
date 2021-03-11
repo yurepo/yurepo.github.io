@@ -2,81 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yurepo.github.com/categories/</loc>
+    <loc>https://yurepo.github.io/categories/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/</loc>
+    <loc>https://yurepo.github.io/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/posts/</loc>
+    <loc>https://yurepo.github.io/posts/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/reactive/</loc>
+    <loc>https://yurepo.github.io/tags/reactive/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/categories/spring/</loc>
+    <loc>https://yurepo.github.io/categories/spring/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/spring-security/</loc>
+    <loc>https://yurepo.github.io/tags/spring-security/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</loc>
+    <loc>https://yurepo.github.io/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/</loc>
+    <loc>https://yurepo.github.io/tags/</loc>
     <lastmod>2020-10-08T19:13:40+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</loc>
+    <loc>https://yurepo.github.io/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</loc>
     <lastmod>2020-10-06T22:28:18+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/java/</loc>
+    <loc>https://yurepo.github.io/tags/java/</loc>
     <lastmod>2020-09-03T22:23:28+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/jvm/</loc>
+    <loc>https://yurepo.github.io/tags/jvm/</loc>
     <lastmod>2020-09-03T22:23:28+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/kotlin/</loc>
+    <loc>https://yurepo.github.io/tags/kotlin/</loc>
     <lastmod>2020-09-03T22:23:28+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/spring-framework/</loc>
+    <loc>https://yurepo.github.io/tags/spring-framework/</loc>
     <lastmod>2020-09-03T22:23:28+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</loc>
+    <loc>https://yurepo.github.io/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</loc>
     <lastmod>2020-09-03T22:23:28+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB/</loc>
+    <loc>https://yurepo.github.io/tags/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB/</loc>
     <lastmod>2020-08-13T20:45:46+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</loc>
+    <loc>https://yurepo.github.io/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</loc>
     <lastmod>2020-08-13T20:45:46+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://yurepo.github.io/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2020-08-13T20:45:46+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/%E6%97%A5%E6%96%87/</loc>
+    <loc>https://yurepo.github.io/tags/%E6%97%A5%E6%96%87/</loc>
     <lastmod>2020-08-13T20:45:46+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/c#/</loc>
+    <loc>https://yurepo.github.io/tags/c#/</loc>
     <lastmod>2020-08-05T22:06:23+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</loc>
+    <loc>https://yurepo.github.io/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</loc>
     <lastmod>2020-08-05T22:06:23+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/leetcode/</loc>
+    <loc>https://yurepo.github.io/tags/leetcode/</loc>
     <lastmod>2020-08-03T22:02:41+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/categories/leetcode/</loc>
+    <loc>https://yurepo.github.io/categories/leetcode/</loc>
     <lastmod>2020-08-03T22:02:41+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/2020/08/parsing-a-boolean-expression/</loc>
+    <loc>https://yurepo.github.io/2020/08/parsing-a-boolean-expression/</loc>
     <lastmod>2020-08-03T22:02:41+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/tags/c/</loc>
+    <loc>https://yurepo.github.io/tags/c/</loc>
     <lastmod>2020-08-01T00:43:58+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/2020/08/helloworld-jvm/</loc>
+    <loc>https://yurepo.github.io/2020/08/helloworld-jvm/</loc>
     <lastmod>2020-08-01T00:43:58+00:00</lastmod>
   </url><url>
-    <loc>https://yurepo.github.com/search/</loc>
+    <loc>https://yurepo.github.io/search/</loc>
   </url>
 </urlset>
