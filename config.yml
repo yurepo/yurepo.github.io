@@ -1,0 +1,128 @@
+baseURL: "https://yurepo.github.io"
+title: Coding 筆記
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+defaultContentLanguage: tw
+language:
+  tw:
+    title: Coding 筆記
+
+# googleAnalytics: UA-123-45
+
+# disqus
+disqusShortname: airay-blog
+
+permalinks:
+  posts: /:year/:month/:title
+  
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    # env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Coding 筆記
+    description: "用來記錄踩過的坑、用過的API、生活等等"
+    author: Aitay
+    # author: ["Me", "You"] # multiple authors
+    # images: ["<link or path of image for opengraph, twitter-cards>"]
+
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    disableSpecial1stPost: false
+    comments: true
+    hidemeta: false
+    showtoc: true
+    tocopen: false
+    ShowPostNavLinks: true
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "<link / abs url>"
+        favicon16x16: "<link / abs url>"
+        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "<link / abs url>"
+        safari_pinned_tab: "<link / abs url>"
+
+    label:
+        text: "Coding 筆記"
+        # icon: /apple-touch-icon.png
+        # iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: true # needs to be explicitly set
+        title: "Aitay"
+        subtitle: "✎ 代碼自救會 ～出現的錯網路上都沒有～ ✎"
+        imageUrl: "https://avatars.githubusercontent.com/u/18010263"
+        imageWidth: 120
+        imageHeight: 120
+        # imageTitle: 
+        buttons:
+            - name: 貼文
+              url: posts
+            - name: 標籤
+              url: tags
+            - name: 分類
+              url: categories
+
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/aitay721822"
+        - name: github
+          url: "https://github.com/aitay721822"
+
+    #analytics:
+    #    google:
+    #        SiteVerificationTag: "XYZabc"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+menu:
+    main:
+        - identifier: Posts
+          name: 文章
+          url: /posts/
+          weight: 10
+        - identifier: Categories
+          name: 分類
+          url: /categories/
+          weight: 20
+        - identifier: Tags
+          name: 標籤
+          url: /tags/
+          weight: 30
+        - identifier: Search
+          name: 搜尋
+          url: /search/
+          weight: 40
