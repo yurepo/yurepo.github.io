@@ -1,2 +1,2 @@
 # yurepo.github.io
-Personal Blog
+Personal Blog (gh-pages)
