@@ -1,0 +1,32 @@
+name: yurepo.github.io_CI
+
+# 當`main`分支有`push`操作
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.81.0'
+          # extended: true
+
+      - name: Build
+        run: hugo --gc --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }} # personal_token 可在此新增 https://github.com/settings/tokens
+          PUBLISH_BRANCH: gh-pages  # 推送到 gh-pages 分支
+          PUBLISH_DIR: ./public  # hugo 生成的目錄
+          commit_message: ${{ github.event.head_commit.message }}
