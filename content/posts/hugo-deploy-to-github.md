@@ -88,7 +88,7 @@ hugo new posts/hello-world.md
 ---
 title: "Hello World"
 date: 2021-03-21T21:46:28+08:00
-draft: true
+draft: false
 ---
 # Hello world
 
