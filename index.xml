@@ -5,7 +5,28 @@
     <link>https://yurepo.github.io/</link>
     <description>Recent content on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Mar 2021 02:12:14 +0800</lastBuildDate><atom:link href="https://yurepo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 20:47:53 +0800</lastBuildDate><atom:link href="https://yurepo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何將Hugo部落格部署到Github上?</title>
+      <link>https://yurepo.github.io/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/</link>
+      <pubDate>Sun, 21 Mar 2021 20:47:53 +0800</pubDate>
+      
+      <guid>https://yurepo.github.io/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/</guid>
+      <description>手把手教學: 將Hugo部落格佈署到Github上 前言 最近將以前的部落格從Hexo遷移到Hugo上了，不得不說Hugo在產生靜態頁面的速度比起Hexo來說快了很多，得益於Hexo跟Hugo都是使用Markdown文件的原因，在兩者之間進行遷移是非常容易的，今天就來為自己做個筆記，希望大家看了這篇文章後，沒有部落格的都可以嘗試建立一下自己的部落格。
+教學開始 這邊安裝的Hugo版本為hugo v0.81.0，環境為Win10 20H2 x64，使用的工具為git與chocolatey，若是macOS，則可以使用Homebrew，Linux的部分則在這邊下載
+第一步，安裝Hugo 這邊主要就照著官方的快速開始建立部落格，因為官方已經寫的足夠清楚了，所以在此處僅寫Windows版本的安裝過程
+如果要安裝普通版本的Hugo，請使用以下指令
+choco install hugo -confirm 如果要安裝Sass/SCSS版本的，請使用以下指令(有些主題會要求需要hugo-extended版本)
+choco install hugo-extended -confirm 第二步，建立部落格 安裝完Hugo後，可以使用hugo version確認是否安裝成功。
+安裝成功後，在你想要建立部落格的資料夾內打開powershell，並打以下指令即可建立。
+hugo new site &amp;lt;資料夾名稱&amp;gt; 出現以下畫面就說明安裝成功了!
+第三步，添加主題 接下來到官方的主題網站挑選您喜歡的主題，此範例使用ananke主題。
+只需要打以下指令就可以新增主題了
+cd &amp;lt;資料夾名稱&amp;gt; git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 接著修改config.toml文件，詳細的設定方式可以參照官網
+# 基本設置 baseURL = &amp;#34;&amp;lt;網址&amp;gt;&amp;#34; title = &amp;#34;&amp;lt;標題&amp;gt;&amp;#34; languageCode = &amp;#34;en-us&amp;#34; # 主題設置 theme=&amp;#34;ananke&amp;#34; # 連結設置 [permalinks] posts = &amp;#34;/:year/:month/:title/&amp;#34; 第四步，建立第一篇貼文 接著輸入以下指令建立第一篇貼文
+hugo new posts/hello-world.md 接著打開Markdown編輯工具(e.g. Visual Studio Code)，寫點簡單的文章並存檔。</description>
+    </item>
+    
     <item>
       <title>Golang Redis Ratelimiter</title>
       <link>https://yurepo.github.io/2021/03/golang-redis-ratelimiter/</link>
