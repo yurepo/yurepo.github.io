@@ -223,7 +223,7 @@ end
 
 ```
 
-`redis.replicate_commands()`: 在Redis 3.2以前，Lua腳本的撰寫必須都是確定性的，也就是說假設今天有1個master與2個slave instance，那Lua腳本必須在三個instance中都產生相同的結果，所以就會導致一些非確定性的指令不能使用，像是`redis.call('TIME')`，所以在Redis 3.2後若要使用非確定性指令的話需要調用此函數。[Redis 5後已將腳本複製模式設為默認，因此不需要顯式調用)](https://redis.io/commands/EVAL#replicating-commands-instead-of-scripts)
+`redis.replicate_commands()`: 在Redis 3.2以前，Lua腳本的撰寫必須都是確定性的，也就是說假設今天有1個master與2個slave instance，那Lua腳本必須在三個instance中都產生相同的結果，所以就會導致一些非確定性的指令不能使用，像是`redis.call('TIME')`，所以在Redis 3.2後若要使用非確定性指令的話需要調用此函數。[Redis 5後已將腳本效果複製模式設為默認，因此不需要顯式調用)](https://redis.io/commands/EVAL#replicating-commands-instead-of-scripts)
 
 首先我們要取得現在時間(ms)，這邊的`redis.call('TIME')`會回傳兩個值回來，一個是Unix timestamp(以秒為單位)一個是當前時間(微秒)，所以當前時間戳(以毫秒為單位)計算公式是`math.floor(time[1] * 1000 + time[2] / 1000)`。
 
