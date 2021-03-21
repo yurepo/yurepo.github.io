@@ -2,6 +2,11 @@
 title: "如何將Hugo部落格部署到Github上?"
 date: 2021-03-21T20:47:53+08:00
 draft: false
+tags:
+  - git
+  - hugo
+categories:
+  - hugo
 ---
 
 # 手把手教學: 將Hugo部落格佈署到Github上
