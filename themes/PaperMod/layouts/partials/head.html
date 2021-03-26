@@ -84,5 +84,9 @@
 {{- template "partials/templates/schema_json.html" . }}
 {{- end }}
 
+<!-- Add GA4 support -->
+{{ template "_internal/google_analytics.html" . }}
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+
