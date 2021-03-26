@@ -26,18 +26,25 @@ UA於2012年10月發布，在上一代GA中，主要以網站會話(session)以�
 
 其中，我們最容易見到的是帶有`utm`開頭參數的連結，範例如下
 
-範例：
 `http://example.com/?utm_source=active%20users&utm_medium=email&utm_campaign=feature...`
 
 這種分享連結後方都會添加一些`utm`開頭之參數，這個`utm`參數會記錄其來源、媒介、名稱，等到使用者造訪網站時，在網站上嵌入的UA會去收集這些參數並發送至Google Analytics，讓網站管理者檢視、分析成效。
 
-上方的範例僅限於使用者是被哪個社群網站、哪個廣告以及從哪個來源(e.g. email、app)吸引而進入網站，那如何去收集使用者在網站內部的活動呢?
+上方的範例僅限於使用者是被哪個社群網站、哪個廣告以及從哪個來源(e.g. email、app)吸引而進入網站，那**如何去收集使用者在網站內部的活動呢**😶?
 
 UA擁有許多不同匹配去收集使用者在網站內部的活動，這邊介紹最常見的三種：
 
-1. 網頁瀏覽匹配: 使用者載入嵌有UA的頁面時便會觸發此匹配，是最常觸發的操作。
-2. 事件匹配: 追蹤使用者在網站上特定元素的每次互動，例如：開啟的網址、播放的影片等。
-3. 交易匹配: 傳送電子商務購買的相關資料，例如：售出的產品、交易ID、庫存計量單位(SKU)等等。
+1. 網頁瀏覽匹配
+
+   使用者載入嵌有UA的頁面時便會觸發此匹配，是最常觸發的操作。
+
+2. 事件匹配
+
+   追蹤使用者在網站上特定元素的每次互動，例如：開啟的網址、播放的影片等。
+
+3. 交易匹配
+
+   傳送電子商務購買的相關資料，例如：售出的產品、交易ID、庫存計量單位(SKU)等等。
 
 除上述三種之外也有許多其他匹配，像是社交匹配、網頁操作時間匹配等
 
@@ -62,7 +69,7 @@ GA4默認提供了六種增強性評估
 
 若要詳細了解GA4的功能及比較，可至[【一表看懂】新版 GA4 與舊版 GA 差在哪裡？新舊版本功能比較懶人包！](https://www.turingdigital.com.tw/blog/app-web-property-comparison)
 
-**TL;DR**：新版GA4相較於上一代GA3更彈性、更智慧(後臺方面)、跨平台，但GA3上有的功能並不一定在GA4上可以找到替代品，若是打算由GA3遷移到GA4，可保留GA3和GA4兩者。不過對於Hugo使用者來說，不管是選擇GA3或是GA4都應該可以達成目的。
+**TL;DR**：新版GA4相較於上一代GA3更彈性、更智慧(後臺方面)、跨平台，**但GA3上有的功能並不一定在GA4上可以找到替代品**，若是打算由GA3遷移到GA4，可保留GA3和GA4兩者。不過對於Hugo使用者來說，不管是選擇GA3或是GA4都應該可以達成目的。
 
 ## 如何在 Hugo 設定 GA4
 
@@ -101,6 +108,6 @@ googleAnalytics: <GA4_評估_ID>
 
 [透過自訂網址收集廣告活動資料](https://support.google.com/analytics/answer/1033863?hl=zh-Hant)
 
-[跟踪代码概览](https://developers.google.com/analytics/resources/concepts/gaConceptsTrackingOverview)
+[跟蹤代碼概覽](https://developers.google.com/analytics/resources/concepts/gaConceptsTrackingOverview)
 
 [How Google Analytics collects data (5:39)](https://www.youtube.com/watch?v=lpMmIPWuKTk)
