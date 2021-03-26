@@ -264,6 +264,6 @@ return { rejected, remainToken }
 ## 測試結果
 
 最後附上測試結果(使用apache bench):
-![圖像](/img/gin-ratelimiter-apache-bench.png)
+![圖像](/img/gin-redis-ratelimiter/gin-ratelimiter-apache-bench.png)
 
 可以看到傳送了1200個Request，僅有1000個請求被允許(剩餘200個全都拋出429 Too Many Request)。

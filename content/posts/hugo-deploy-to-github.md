@@ -47,7 +47,7 @@ hugo new site <資料夾名稱>
 
 出現以下畫面就說明安裝成功了!
 
-![圖像](/img/hugo-create-new-blog.gif)
+![圖像](/img/hugo-github-actions/hugo-create-new-blog.gif)
 
 ### 第三步，添加主題
 
@@ -113,7 +113,7 @@ draft: false
 
 註: username必須是您在Github上的的使用者名稱
 
-![圖像](/img/github-create-hugo-repository.PNG)
+![圖像](/img/hugo-github-actions/github-create-hugo-repository.PNG)
 
 接下來，在部落格資料夾下建立一條`gh-pages`分支(branch)，這個分支是用來展示靜態頁面的，我們稍後會使用Github Action將主分支的內容透過自動化部署的方式，自動產生靜態文件到`gh-pages`分支上。
 
@@ -159,19 +159,19 @@ git checkout main
 
 將`workflow`那一項打勾之後到頁面最下方按下`Generate Token`
 
-![圖像](/img/github-hugo-personal-key.PNG)
+![圖像](/img/hugo-github-actions/github-hugo-personal-key.PNG)
 
 將產生出來的令牌先複製起來
 
-![圖像](/img/github-hugo-get-personal-key.PNG)
+![圖像](/img/hugo-github-actions/github-hugo-get-personal-key.PNG)
 
 接下來到你存放Hugo部落格的Repository > Settings > Secret > New repository secret新增你剛取得的令牌
 
-![圖像](/img/github-hugo-repository-secret.PNG)
+![圖像](/img/hugo-github-actions/github-hugo-repository-secret.PNG)
 
 將Name取為`HUGO_DEPLOY_TOKEN`，Value設定為剛取得的令牌，按下`Add Secret`
 
-![圖像](/img/github-hugo-create-secret-token.PNG)
+![圖像](/img/hugo-github-actions/github-hugo-create-secret-token.PNG)
 
 至此前置動作完成，接下來開始設定workflow
 
@@ -181,7 +181,7 @@ git checkout main
 
 首先，進到Github Action頁面，並點選`set up a workflow your self`
 
-![圖像](/img/github-actions-hugo.PNG)
+![圖像](/img/hugo-github-actions/github-actions-hugo.PNG)
 
 將下面的文件貼上並修改一些設定(e.g. name)
 
@@ -224,7 +224,7 @@ jobs:
 
 若執行狀態為綠色打勾即為部署成功!
 
-![圖像](/img/github-hugo-action-deploy.PNG)
+![圖像](/img/hugo-github-actions/github-hugo-action-deploy.PNG)
 
 ### 第八步，部落格建置
 
@@ -238,7 +238,7 @@ jobs:
 
 剩下的靜態文件產生會由Github Action幫你處理並自動幫你部署到`gh-pages`分支上。
 
-![圖像](/img/github-hugo-deploy-complete.PNG)
+![圖像](/img/hugo-github-actions/github-hugo-deploy-complete.PNG)
 
 ## 結語
 
