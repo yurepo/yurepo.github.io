@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JVM on Coding 筆記</title>
-    <link>https://yurepo.github.io/tags/jvm/</link>
+    <link>https://yurepo.tw/tags/jvm/</link>
     <description>Recent content in JVM on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Sep 2020 22:23:28 +0000</lastBuildDate><atom:link href="https://yurepo.github.io/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2020 22:23:28 +0000</lastBuildDate><atom:link href="https://yurepo.tw/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring WebFlux 應用開發</title>
-      <link>https://yurepo.github.io/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
+      <link>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
       <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
+      <guid>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
       <description>使用Spring WebFlux保護您的網站應用(驗證篇) 相信瀏覽到這個Topic的各位一定都對 Reactive 有相當的認識了，本文章將專注在講解 WebFlux &amp;amp; Reactive Security的應用開發，其餘基礎便不再贅述。
 首先我們需要到 Spring Initializr 產生我們的Spring WebFlux Application。
 本文章需要的依賴有：Spring Reactive Web、Spring Security、Spring Configuration Processor(可選) *文章撰寫時 Spring 版本為 2.4.0(M2)，依據版本更新有些地方會稍稍不同。 接下來使用您喜歡的IDE去做開發，本文將使用Intellij IDEA開發
@@ -22,10 +22,10 @@ dependencies { // jwt dependency implementation(&amp;quot;com.auth0:java-jwt:3.1
     
     <item>
       <title>Parsing A Boolean Expression</title>
-      <link>https://yurepo.github.io/2020/08/parsing-a-boolean-expression/</link>
+      <link>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</link>
       <pubDate>Mon, 03 Aug 2020 22:02:41 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/08/parsing-a-boolean-expression/</guid>
+      <guid>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</guid>
       <description>題目要求是要輸入一個運算式回傳該運算式的結果 有下列規則
  &amp;ldquo;t&amp;rdquo;，代表為 True &amp;ldquo;f&amp;rdquo;，代表為 False &amp;ldquo;!(expr)&amp;quot;，表示將expr得出的布林值反向 &amp;ldquo;&amp;amp;(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做AND &amp;ldquo;|(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做OR  馬上進入程式碼撰寫的部分，主要是以遞迴解決 我的想法應該算蠻差的，效能那些部分都不能強求，所以僅放上來做參考，歡迎底下討論
 class Solution { companion object{ // 運算子列表  val operator = arrayOf(&amp;#39;!&amp;#39;, &amp;#39;&amp;amp;&amp;#39;, &amp;#39;|&amp;#39;) } fun parseBoolExpr(expression: String): Boolean { // 如果運算式為空，回傳 `False`  if (expression.isEmpty()) return false return expr(expression) } fun expr(expression: String): Boolean{ // 如果運算式的首個元素不包含於運算子列表(!、&amp;amp;、|)，回傳 `False`  if (!operator.contains(expression[0])) return false // 取得運算子  val mod = expression[0] // 檢查運算子後的下一個字元是否為 `(`  val optStart = if(expression[1] == &amp;#39;(&amp;#39;) 1 else throw RuntimeException(&amp;#34;not valid pattern&amp;#34;) // 檢查運算式的最後一個字源是否為 `)`  val optEnd = if(expression[expression.</description>
@@ -33,10 +33,10 @@ class Solution { companion object{ // 運算子列表  val operator = arrayOf(&a
     
     <item>
       <title>HelloWorld | JVM</title>
-      <link>https://yurepo.github.io/2020/08/helloworld-jvm/</link>
+      <link>https://yurepo.tw/2020/08/helloworld-jvm/</link>
       <pubDate>Sat, 01 Aug 2020 00:43:58 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/08/helloworld-jvm/</guid>
+      <guid>https://yurepo.tw/2020/08/helloworld-jvm/</guid>
       <description>HelloWorld | JVM 因為是部落格上的第一篇，所以想來測試基本語法高亮 首先是Java
 // 測試Java註解 public static void main(string[] args){ System.out.println(&amp;#34;hello world&amp;#34;); } 接下來是Kotlin
 fun main(){ &amp;#34;hello world&amp;#34;.println() } fun String.println(){ println(this) } 最後基本的C語言好了

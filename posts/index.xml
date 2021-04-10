@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Coding 筆記</title>
-    <link>https://yurepo.github.io/posts/</link>
+    <link>https://yurepo.tw/posts/</link>
     <description>Recent content in Posts on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 26 Mar 2021 23:35:19 +0800</lastBuildDate><atom:link href="https://yurepo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Mar 2021 23:35:19 +0800</lastBuildDate><atom:link href="https://yurepo.tw/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 添加 Google Analytics 4 筆記</title>
-      <link>https://yurepo.github.io/2021/03/hugo-%E6%B7%BB%E5%8A%A0-google-analytics-4-%E7%AD%86%E8%A8%98/</link>
+      <link>https://yurepo.tw/2021/03/hugo-%E6%B7%BB%E5%8A%A0-google-analytics-4-%E7%AD%86%E8%A8%98/</link>
       <pubDate>Fri, 26 Mar 2021 23:35:19 +0800</pubDate>
       
-      <guid>https://yurepo.github.io/2021/03/hugo-%E6%B7%BB%E5%8A%A0-google-analytics-4-%E7%AD%86%E8%A8%98/</guid>
+      <guid>https://yurepo.tw/2021/03/hugo-%E6%B7%BB%E5%8A%A0-google-analytics-4-%E7%AD%86%E8%A8%98/</guid>
       <description>Hugo 添加 Google Analytics 4 筆記 前言 最近HUGO更新了0.82.0版本，此版本對比上一版本改進不大，對我來說，最有感的應該是增加了內置Google Analytics 4的支持，也就是可以使用G-開頭的評估ID而不是UA-開頭的追蹤ID，那首先就來回顧一下Universal Analytics(GA3)與Google Analytics 4。
 GA4 x GA3 GA3 (Universal Analytics) UA於2012年10月發布，在上一代GA中，主要以網站會話(session)以及網站頁面為主，資料的來源主要從三個管道收集
  HTTP請求 瀏覽器/系統資訊 第一方Cookie  其中，我們最容易見到的是帶有utm開頭參數的連結，範例如下
@@ -36,10 +36,10 @@ GA4默認提供了六種增強性評估
     
     <item>
       <title>如何將Hugo部落格部署到Github上?</title>
-      <link>https://yurepo.github.io/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/</link>
+      <link>https://yurepo.tw/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/</link>
       <pubDate>Sun, 21 Mar 2021 20:47:53 +0800</pubDate>
       
-      <guid>https://yurepo.github.io/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/</guid>
+      <guid>https://yurepo.tw/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/</guid>
       <description>手把手教學: 將Hugo部落格佈署到Github上 前言 最近將以前的部落格從Hexo遷移到Hugo上了，不得不說Hugo在產生靜態頁面的速度比起Hexo來說快了很多，得益於Hexo跟Hugo都是使用Markdown文件的原因，在兩者之間進行遷移是非常容易的，今天就來為自己做個筆記，希望大家看了這篇文章後，沒有部落格的都可以嘗試建立一下自己的部落格。
 教學開始 這邊安裝的Hugo版本為hugo v0.81.0，環境為Win10 20H2 x64，使用的工具為git與chocolatey，若是macOS，則可以使用Homebrew，Linux的部分則在這邊下載
 第一步，安裝Hugo 這邊主要就照著官方的快速開始建立部落格，因為官方已經寫的足夠清楚了，所以在此處僅寫Windows版本的安裝過程
@@ -57,10 +57,10 @@ hugo new posts/hello-world.md 接著打開Markdown編輯工具(e.g. Visual Studi
     
     <item>
       <title>Golang Redis Ratelimiter</title>
-      <link>https://yurepo.github.io/2021/03/golang-redis-ratelimiter/</link>
+      <link>https://yurepo.tw/2021/03/golang-redis-ratelimiter/</link>
       <pubDate>Tue, 16 Mar 2021 02:12:14 +0800</pubDate>
       
-      <guid>https://yurepo.github.io/2021/03/golang-redis-ratelimiter/</guid>
+      <guid>https://yurepo.tw/2021/03/golang-redis-ratelimiter/</guid>
       <description>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，主要來講是整個限流過程是如何運作的。
 Github連結
 主要定義了四個文件
@@ -73,10 +73,10 @@ type RedisRateLimiter struct { context context.Context scriptSHA1 string client 
     
     <item>
       <title>Spring Security 02 - Security Context? 從哪來?</title>
-      <link>https://yurepo.github.io/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</link>
+      <link>https://yurepo.tw/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</link>
       <pubDate>Thu, 08 Oct 2020 19:13:40 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</guid>
+      <guid>https://yurepo.tw/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</guid>
       <description>上回我們說了SecurityContextHolder主要在做什麼，這回主要討論的是，SecurityContext到底是何方神聖，它從何而來。
 SecurityContext它作為 Spring Security 核心中的一部分，它的作用可說是非常重要的。我們來看看SecurityContext的源碼。
 public interface SecurityContext extends Serializable { /** * 獲取當前已驗證的身分或驗證請求令牌 * * @return the &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no authentication * information is available */ Authentication getAuthentication(); /** * 改變目前已驗證的身分或刪除驗證資料 * * @param authentication the new &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; token, or * &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no further authentication information should be stored */ void setAuthentication(Authentication authentication); } 可以看到SecurityContext主要是在管理Authentication的物件，那這個Authentication主要是存放當前使用者的身分(廢話)、存放是否已驗證以及取得目前使用者擁有的權限。
@@ -87,10 +87,10 @@ public interface SecurityContext extends Serializable { /** * 獲取當前已驗
     
     <item>
       <title>Spring Security 01 - 關於 ReactiveSecurityContextHolder 的一兩件事</title>
-      <link>https://yurepo.github.io/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</link>
+      <link>https://yurepo.tw/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</link>
       <pubDate>Tue, 06 Oct 2020 22:28:18 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</guid>
+      <guid>https://yurepo.tw/2020/10/spring-security-01-%E9%97%9C%E6%96%BC-reactivesecuritycontextholder-%E7%9A%84%E4%B8%80%E5%85%A9%E4%BB%B6%E4%BA%8B/</guid>
       <description>Spring Security對於寫過Spring Boot的人應該是再熟悉不過了，這篇文主要紀錄我對於 ReactiveSecurityContextHolder的理解，原始碼版本為5.4.0-RC1。
 在聊原始碼前，我想先聊一下Context到底是什麼。
 Context，中文譯作「上下文」，我對於上下文的理解就是物件作用的環境。
@@ -103,10 +103,10 @@ public class ReactiveSecurityContextHolder { private static final Class&amp;lt;?
     
     <item>
       <title>Spring WebFlux 應用開發</title>
-      <link>https://yurepo.github.io/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
+      <link>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
       <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
+      <guid>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
       <description>使用Spring WebFlux保護您的網站應用(驗證篇) 相信瀏覽到這個Topic的各位一定都對 Reactive 有相當的認識了，本文章將專注在講解 WebFlux &amp;amp; Reactive Security的應用開發，其餘基礎便不再贅述。
 首先我們需要到 Spring Initializr 產生我們的Spring WebFlux Application。
 本文章需要的依賴有：Spring Reactive Web、Spring Security、Spring Configuration Processor(可選) *文章撰寫時 Spring 版本為 2.4.0(M2)，依據版本更新有些地方會稍稍不同。 接下來使用您喜歡的IDE去做開發，本文將使用Intellij IDEA開發
@@ -117,30 +117,30 @@ dependencies { // jwt dependency implementation(&amp;quot;com.auth0:java-jwt:3.1
     
     <item>
       <title>ヨルシカ - 花人局【翻譯】</title>
-      <link>https://yurepo.github.io/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</link>
+      <link>https://yurepo.tw/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</link>
       <pubDate>Thu, 13 Aug 2020 20:45:46 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</guid>
+      <guid>https://yurepo.tw/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</guid>
       <description>歌曲連結[Youtube Music]
 さよならを置いて僕に花もたせ 拋下一句再見就離開的妳為我留下了一朵花 覚束ぬままに夜が明けて 在沒有意識的情況下迎來了黎明 誰もいない部屋で起きた 於空無一人的房間裡醒來的我 その温もり一つ残して 身旁僅殘留一絲溫暖 昨日の夜のことは少しも覚えてないけれど 雖然一點也記不起來昨天晚上發生過的事情 他に誰かが居た、そんな気がただしている 也只是感覺昨晚似乎還有誰在的樣子 二日酔いが残る頭は回っちゃいないけれど 雖然腦袋還因為宿醉而無法好好運作 わからないままでもまぁ、それはそれでも綺麗だ 但是如果就這樣記不起來的話、也倒是有其美麗之處 洗面台の歯ブラシ、誰かのコップ、棚の化粧水 洗手台上的牙刷、不知道是誰的杯子、架子上的化妝水 覚えのない物ばかりだ 看到的盡是些沒有印象的物品 枕は花の匂いがする 枕頭上傳來了花的香味 さよならを置いて僕に花もたせ 拋下一句再見就離開的妳為我留下了一朵花 覚束ぬままに夜が明けて 在沒有意識的情況下迎來了黎明 誰もいない部屋で起きる 於空無一人的房間裡醒來的我 その温もり一つ残して 身旁僅殘留一絲溫暖 昨日の夜のことはそこまで覚えてないけれど 雖然記不清楚昨天晚上發生過的事情 美人局を疑う、そんな気もしないでいる 也懷疑過是一場仙人跳，但卻沒有那種感覺 二日酔いも醒めた頭で考えていたけど 儘管已經用宿醉過後的腦袋思考過了 わからないままでもいい 但卻覺得就這樣想不起來也不錯 むしろその方がいい 倒不如說這樣才是最好的 窓際咲くラベンダー、汚れたシンク、編み掛けのマフラー 窗邊盛開的薰衣草、骯髒的水槽、編織後掛著的圍巾 覚えのない事ばかりだ 想起來的淨是一些不記得的事情 部屋には春の匂いがする 房間裡飄散著春天的氣息 浮雲掴むような花人局 仿佛抓住浮雲一般的花人局 誰も来ないまま日が暮れて 等不到誰的回來，就這樣天色漸漸暗下 夕陽の差した窓一つ 只留下一扇照進夕陽餘暉的窗戶 何も知らない僕を残して 和一無所知的我 昨日の夜のことも本当は少し覚えてるんだ 昨天晚上發生過的事情其實還記得一些 貴方の居ない暮らし、それが続くことも 沒有了妳的生活、還是會繼續生活下去 今でもこの頭一つで考えているばかり 至今還是一股腦地去想著 花一つ持たせて消えた貴方のこと 留下一朵花後消逝的妳的事情 明日にはきっと戻ってくる 明天妳一定會回來的吧 何気ない顔で帰ってくる 一定會帶著若無其事的表情回來的吧 今にドアが開いて聞こえる 甚至現在把門打開好像就能聽到妳說 ごめんね、遅くなったって 「對不起、我遲到了」 言葉だけをずっと待っている 這樣的話語我一直在等待著 夕焼けをじっと待っている 靜靜地等待著晚霞 忘れてしまう前に花描け 在忘卻之前把花朵描繪出來吧 今日も一人また夜が来て 今日也是獨自迎來夜晚 誰もいない部屋で眠る 我能在空無一人的房間裡睡著 その温もり、僕に残して 是因為我還殘存著那份溫暖 馬鹿みたいに愛は花もたせ 把名譽拱手讓人的像笨蛋一樣的愛 この部屋にもまた春が来て 才能讓這個房間再次迎來春天 貴方のいない街を生きる 我能生活在沒有妳的街道上 その温もり、僕に残して 是因為我還殘存著那份溫暖 僕にひとつ、花を残して 給我留下一朵花的那份溫暖 言葉だけをずっと待っている 這樣的話語我一直在等待著 夕焼けをじっと待っている 靜靜地等待著晚霞 可供轉載，標明出處 </description>
     </item>
     
     <item>
       <title>回頭看當年技藝競賽題目</title>
-      <link>https://yurepo.github.io/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</link>
+      <link>https://yurepo.tw/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</link>
       <pubDate>Wed, 05 Aug 2020 22:06:23 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</guid>
+      <guid>https://yurepo.tw/2020/08/%E5%9B%9E%E9%A0%AD%E7%9C%8B%E7%95%B6%E5%B9%B4%E6%8A%80%E8%97%9D%E7%AB%B6%E8%B3%BD%E9%A1%8C%E7%9B%AE/</guid>
       <description>這幾天在準備上課教材，所以回頭做了一些技藝競賽的歷屆考題 我還記得以前有一題在我高中的時候花了將近幾天在想答案，回去重做發現&amp;hellip;&amp;hellip;
 什麼鬼???不就只是遞迴而已&amp;hellip; 重寫後發現猜想真的是對的，可能當時練習的時候頭腦有點混亂吧，原本是寫了三、四個迴圈在裡面跑，有些數字還會直接當掉不給動只能說當時太笨了&amp;hellip; 希望回去學校教的時候學弟不要太聰明，不然當時的我會站不了檯面阿阿阿。 因為太丟人了程式碼就不放上來了。</description>
     </item>
     
     <item>
       <title>Parsing A Boolean Expression</title>
-      <link>https://yurepo.github.io/2020/08/parsing-a-boolean-expression/</link>
+      <link>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</link>
       <pubDate>Mon, 03 Aug 2020 22:02:41 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/08/parsing-a-boolean-expression/</guid>
+      <guid>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</guid>
       <description>題目要求是要輸入一個運算式回傳該運算式的結果 有下列規則
  &amp;ldquo;t&amp;rdquo;，代表為 True &amp;ldquo;f&amp;rdquo;，代表為 False &amp;ldquo;!(expr)&amp;quot;，表示將expr得出的布林值反向 &amp;ldquo;&amp;amp;(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做AND &amp;ldquo;|(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做OR  馬上進入程式碼撰寫的部分，主要是以遞迴解決 我的想法應該算蠻差的，效能那些部分都不能強求，所以僅放上來做參考，歡迎底下討論
 class Solution { companion object{ // 運算子列表  val operator = arrayOf(&amp;#39;!&amp;#39;, &amp;#39;&amp;amp;&amp;#39;, &amp;#39;|&amp;#39;) } fun parseBoolExpr(expression: String): Boolean { // 如果運算式為空，回傳 `False`  if (expression.isEmpty()) return false return expr(expression) } fun expr(expression: String): Boolean{ // 如果運算式的首個元素不包含於運算子列表(!、&amp;amp;、|)，回傳 `False`  if (!operator.contains(expression[0])) return false // 取得運算子  val mod = expression[0] // 檢查運算子後的下一個字元是否為 `(`  val optStart = if(expression[1] == &amp;#39;(&amp;#39;) 1 else throw RuntimeException(&amp;#34;not valid pattern&amp;#34;) // 檢查運算式的最後一個字源是否為 `)`  val optEnd = if(expression[expression.</description>
@@ -148,10 +148,10 @@ class Solution { companion object{ // 運算子列表  val operator = arrayOf(&a
     
     <item>
       <title>HelloWorld | JVM</title>
-      <link>https://yurepo.github.io/2020/08/helloworld-jvm/</link>
+      <link>https://yurepo.tw/2020/08/helloworld-jvm/</link>
       <pubDate>Sat, 01 Aug 2020 00:43:58 +0000</pubDate>
       
-      <guid>https://yurepo.github.io/2020/08/helloworld-jvm/</guid>
+      <guid>https://yurepo.tw/2020/08/helloworld-jvm/</guid>
       <description>HelloWorld | JVM 因為是部落格上的第一篇，所以想來測試基本語法高亮 首先是Java
 // 測試Java註解 public static void main(string[] args){ System.out.println(&amp;#34;hello world&amp;#34;); } 接下來是Kotlin
 fun main(){ &amp;#34;hello world&amp;#34;.println() } fun String.println(){ println(this) } 最後基本的C語言好了
