@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yurepo.tw/categories/</loc>
-    <lastmod>2021-03-26T23:35:19+08:00</lastmod>
+    <lastmod>2021-07-16T18:07:52+08:00</lastmod>
   </url><url>
     <loc>https://yurepo.tw/</loc>
-    <lastmod>2021-03-26T23:35:19+08:00</lastmod>
+    <lastmod>2021-07-16T18:07:52+08:00</lastmod>
+  </url><url>
+    <loc>https://yurepo.tw/posts/</loc>
+    <lastmod>2021-07-16T18:07:52+08:00</lastmod>
+  </url><url>
+    <loc>https://yurepo.tw/tags/</loc>
+    <lastmod>2021-07-16T18:07:52+08:00</lastmod>
+  </url><url>
+    <loc>https://yurepo.tw/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2021-07-16T18:07:52+08:00</lastmod>
+  </url><url>
+    <loc>https://yurepo.tw/2021/07/%E8%87%BA%E4%B8%AD%E7%A7%91%E5%A4%A7-110-%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%A1%8C%E4%BA%8B%E6%9B%86/</loc>
+    <lastmod>2021-07-16T18:07:52+08:00</lastmod>
+  </url><url>
+    <loc>https://yurepo.tw/tags/%E8%A1%8C%E4%BA%8B%E6%9B%86/</loc>
+    <lastmod>2021-07-16T18:07:52+08:00</lastmod>
   </url><url>
     <loc>https://yurepo.tw/tags/hugo/</loc>
     <lastmod>2021-03-26T23:35:19+08:00</lastmod>
@@ -15,12 +30,6 @@
     <lastmod>2021-03-26T23:35:19+08:00</lastmod>
   </url><url>
     <loc>https://yurepo.tw/2021/03/hugo-%E6%B7%BB%E5%8A%A0-google-analytics-4-%E7%AD%86%E8%A8%98/</loc>
-    <lastmod>2021-03-26T23:35:19+08:00</lastmod>
-  </url><url>
-    <loc>https://yurepo.tw/posts/</loc>
-    <lastmod>2021-03-26T23:35:19+08:00</lastmod>
-  </url><url>
-    <loc>https://yurepo.tw/tags/</loc>
     <lastmod>2021-03-26T23:35:19+08:00</lastmod>
   </url><url>
     <loc>https://yurepo.tw/tags/git/</loc>
@@ -78,9 +87,6 @@
     <lastmod>2020-08-13T20:45:46+00:00</lastmod>
   </url><url>
     <loc>https://yurepo.tw/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</loc>
-    <lastmod>2020-08-13T20:45:46+00:00</lastmod>
-  </url><url>
-    <loc>https://yurepo.tw/categories/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2020-08-13T20:45:46+00:00</lastmod>
   </url><url>
     <loc>https://yurepo.tw/tags/%E6%97%A5%E6%96%87/</loc>

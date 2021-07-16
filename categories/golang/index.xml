@@ -12,7 +12,7 @@
       <pubDate>Tue, 16 Mar 2021 02:12:14 +0800</pubDate>
       
       <guid>https://yurepo.tw/2021/03/golang-redis-ratelimiter/</guid>
-      <description>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，主要來講是整個限流過程是如何運作的。
+      <description>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，今天主要要來講整個限流過程是如何運作的。
 Github連結
 主要定義了四個文件
    文件名 描述     dto.go 定義及宣告Ratelimiter的基本結構與核心Take()方法   err.go 定義了一些錯誤   ratelimiter.go 存放gin middleware中驗證的邏輯   script.go 存放 lua 腳本及 lua 腳本中輸入變數的結構    我們會將上次更新的時間與剩餘令牌的數量儲存在Redis中，而主要更新的邏輯會寫在script.go，這裡會發現整個操作Redis資料庫的邏輯是使用lua script去實作的，把多個操作Redis的指令包在lua script中，Redis會保證lua script中的多個操作會以Atomic的方式進行，這樣才可以保證每個操作之間不會有競爭情況(Race Condition)發生。 參考資料

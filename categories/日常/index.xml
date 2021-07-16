@@ -5,7 +5,30 @@
     <link>https://yurepo.tw/categories/%E6%97%A5%E5%B8%B8/</link>
     <description>Recent content in 日常 on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 13 Aug 2020 20:45:46 +0000</lastBuildDate><atom:link href="https://yurepo.tw/categories/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jul 2021 18:07:52 +0800</lastBuildDate><atom:link href="https://yurepo.tw/categories/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>臺中科大 110 學年度行事曆</title>
+      <link>https://yurepo.tw/2021/07/%E8%87%BA%E4%B8%AD%E7%A7%91%E5%A4%A7-110-%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%A1%8C%E4%BA%8B%E6%9B%86/</link>
+      <pubDate>Fri, 16 Jul 2021 18:07:52 +0800</pubDate>
+      
+      <guid>https://yurepo.tw/2021/07/%E8%87%BA%E4%B8%AD%E7%A7%91%E5%A4%A7-110-%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%A1%8C%E4%BA%8B%E6%9B%86/</guid>
+      <description>臺中科大 110 學年度日間部行事曆 今天在校對生成的日曆時，看到110學年度下學期的日曆，不禁有一些感慨，就像是國中升高中，高中升大學，等到意識到要畢業了，才發現自己過去這幾年不知道都在幹啥。
+大學生活裡，最後悔的是大一，許多時間都被浪費掉了，現在想想如果善用那些時間，或許可以把自己的程度提升更多。如果有剛入學的大一新生看到這篇文章的話，希望各位可以善用時間去提升自己的能力，不要像我一樣只會耍廢哈哈。
+我想抱怨的話就到此結束了吧，時間也都回不去了。
+行事曆 以下提供的行事曆都以臺中科大官網為主。
+日曆的活動類型都為全天活動，通知時間會是該活動的前一天早上9:00
+共用連結 110-1臺中科大日間部行事曆
+110-2臺中科大日間部行事曆
+公開網址 110-1臺中科大日間部行事曆
+110-2臺中科大日間部行事曆
+iCal 格式公開網址 110-1臺中科大日間部行事曆
+110-2臺中科大日間部行事曆
+Q&amp;amp;A 我想可能會有人問說：為什麼不開源給其他人自己生成?
+這是因為每學年(甚至同一份文件)學校官網提供的pdf文件在格式上都會有一點差異，加上我懶，這份程式碼還停留在兩三年前的版本，不保證在未來一定能夠使用，所以不開源。
+給有興趣的人參考，使用語言：Python3，需要安裝的套件：pdfplumber
+結語 雖然前幾年都有生成這類型的日曆，但想說最後一年了就分享出來給需要的人，如果有幫助到你們的話，那我花費的時間也會讓我比較心安理得了😂</description>
+    </item>
+    
     <item>
       <title>ヨルシカ - 花人局【翻譯】</title>
       <link>https://yurepo.tw/2020/08/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-%E8%8A%B1%E4%BA%BA%E5%B1%80%E7%BF%BB%E8%AD%AF/</link>
