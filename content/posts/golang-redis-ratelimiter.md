@@ -13,7 +13,7 @@ categories:
 
 ## 前言
 
-這幾天將令牌桶限流演算法使用gin + redis實現了，主要來講是整個限流過程是如何運作的。
+這幾天將令牌桶限流演算法使用gin + redis實現了，今天主要要來講整個限流過程是如何運作的。
 
 [Github連結](https://github.com/aitay721822/gin-redis-ratelimiter)
 
