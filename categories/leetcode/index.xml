@@ -5,22 +5,7 @@
     <link>https://yurepo.tw/categories/leetcode/</link>
     <description>Recent content in LeetCode on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Aug 2021 23:53:41 +0800</lastBuildDate><atom:link href="https://yurepo.tw/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Leetcode 1632</title>
-      <link>https://yurepo.tw/2021/08/leetcode-1632/</link>
-      <pubDate>Sun, 08 Aug 2021 23:53:41 +0800</pubDate>
-      
-      <guid>https://yurepo.tw/2021/08/leetcode-1632/</guid>
-      <description>Rank Transform of a Matrix 最近在刷 LC 的時候，看到這題很有趣的題目，這題的其中一個解法使用了併查集(Disjoint-set data structure)，下面來回顧一下併查集的概念。
-併查集 併查集用於處理一些不交集的合併與查詢問題，最常用的一種實現為不交集森林，其空間複雜度(SC)以及操作時間複雜度(TC)如下：
-操作時間複雜度: $$ Time\hspace*{2mm}Complexity = O(\alpha(n)) $$
-空間複雜度： $$ Space\hspace*{2mm}Complexity = O(n) $$
-不交集森林 不交集森林把每個集合以樹狀表示，每個元素都儲存了回到父元素的值，根元素則儲存回到自身的值或是無效值。
-使用不交集森林實現的併查集，每個集合的代表元素為根(Root)元素。
-操作簡介  添加：將元素 查詢：找尋該元素所在的集合 合併：將兩個元素的集合合併在一起  </description>
-    </item>
-    
+    <lastBuildDate>Mon, 03 Aug 2020 22:02:41 +0000</lastBuildDate><atom:link href="https://yurepo.tw/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Parsing A Boolean Expression</title>
       <link>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</link>
