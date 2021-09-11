@@ -5,7 +5,22 @@
     <link>https://yurepo.tw/posts/</link>
     <description>Recent content in Posts on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 16 Jul 2021 18:07:52 +0800</lastBuildDate><atom:link href="https://yurepo.tw/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Aug 2021 23:53:41 +0800</lastBuildDate><atom:link href="https://yurepo.tw/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 1632</title>
+      <link>https://yurepo.tw/2021/08/leetcode-1632/</link>
+      <pubDate>Sun, 08 Aug 2021 23:53:41 +0800</pubDate>
+      
+      <guid>https://yurepo.tw/2021/08/leetcode-1632/</guid>
+      <description>Rank Transform of a Matrix 最近在刷 LC 的時候，看到這題很有趣的題目，這題的其中一個解法使用了併查集(Disjoint-set data structure)，下面來回顧一下併查集的概念。
+併查集 併查集用於處理一些不交集的合併與查詢問題，最常用的一種實現為不交集森林，其空間複雜度(SC)以及操作時間複雜度(TC)如下：
+操作時間複雜度: $$ Time\hspace*{2mm}Complexity = O(\alpha(n)) $$
+空間複雜度： $$ Space\hspace*{2mm}Complexity = O(n) $$
+不交集森林 不交集森林把每個集合以樹狀表示，每個元素都儲存了回到父元素的值，根元素則儲存回到自身的值或是無效值。
+使用不交集森林實現的併查集，每個集合的代表元素為根(Root)元素。
+操作簡介  添加：將元素 查詢：找尋該元素所在的集合 合併：將兩個元素的集合合併在一起  </description>
+    </item>
+    
     <item>
       <title>臺中科大 110 學年度行事曆</title>
       <link>https://yurepo.tw/2021/07/%E8%87%BA%E4%B8%AD%E7%A7%91%E5%A4%A7-110-%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%A1%8C%E4%BA%8B%E6%9B%86/</link>
@@ -122,20 +137,6 @@ Context，中文譯作「上下文」，我對於上下文的理解就是物件�
 而SecurityContextHolder就是單純保存這個上下文而存在的。 在傳統Servlet應用SecurityContextHolder是存在多種保存上下文的策略，比方說GlobalSecurityContextHolderStrategy、InheritableThreadLocalSecurityContextHolderStrategy跟ThreadLocalSecurityContextHolderStrategy，但在ReactiveSecurityContextHolder中，並沒有多種策略去保存SecurityContext，唯一保存上下文的方法就是透過Reactor的上下文。
 以下為個人部分翻譯的源碼：
 public class ReactiveSecurityContextHolder { private static final Class&amp;lt;?&amp;gt; SECURITY_CONTEXT_KEY = SecurityContext.class; /** * 從 Reactor {@link Context} 取得 {@code Mono&amp;lt;SecurityContext&amp;gt;} * @return 回傳 {@code Mono&amp;lt;SecurityContext&amp;gt;} */ public static Mono&amp;lt;SecurityContext&amp;gt; getContext() { // 從Reactor的上下文中取得SecurityContext 	return Mono.subscriberContext() .filter( c -&amp;gt; c.hasKey(SECURITY_CONTEXT_KEY)) .flatMap( c-&amp;gt; c.&amp;lt;Mono&amp;lt;SecurityContext&amp;gt;&amp;gt;get(SECURITY_CONTEXT_KEY)); } /** * 從 Reactor {@link Context} 清除 {@code Mono&amp;lt;SecurityContext&amp;gt;} * @return 清除Reactor上下文，並回傳一個 Mono&amp;lt;Void&amp;gt;，若清除失敗，則報錯。 */ public static Function&amp;lt;Context, Context&amp;gt; clearContext() { // 從Reactor的上下文中刪除SecurityContext 	return context -&amp;gt; context.</description>
-    </item>
-    
-    <item>
-      <title>Spring WebFlux 應用開發</title>
-      <link>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
-      <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
-      
-      <guid>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
-      <description>使用Spring WebFlux保護您的網站應用(驗證篇) 相信瀏覽到這個Topic的各位一定都對 Reactive 有相當的認識了，本文章將專注在講解 WebFlux &amp;amp; Reactive Security的應用開發，其餘基礎便不再贅述。
-首先我們需要到 Spring Initializr 產生我們的Spring WebFlux Application。
-本文章需要的依賴有：Spring Reactive Web、Spring Security、Spring Configuration Processor(可選) *文章撰寫時 Spring 版本為 2.4.0(M2)，依據版本更新有些地方會稍稍不同。 接下來使用您喜歡的IDE去做開發，本文將使用Intellij IDEA開發
-前置準備 首先先添加Jwt的依賴，我們會於稍後用到。(這部分採用您熟悉的工具也行，也不一定需要用Jwt，PASETO也是不錯的選擇)
-dependencies { // jwt dependency implementation(&amp;quot;com.auth0:java-jwt:3.10.3&amp;quot;) // other depencies ... } 設定網站端點 這部分我們需要配置Spring Security，與以往的Servlet應用不同，不能直接繼承WebSecurityConfigurerAdapter去做設定。 首先，在專案底下新增一Packageauth，把所有驗證、授權邏輯放在這。 在auth資料夾底下再新增一個Packageconfig，標示其為設定檔所在位置。 在config底下新增一類別稱作AuthSecurityConfig。 在AuthSecurityConfig新增以下程式碼規劃網站授權的Endpoints
-@Bean fun authRoute(http: ServerHttpSecurity): SecurityWebFilterChain { return http { // csrf 關閉，方便測試  csrf { disable() } // 只篩選/auth開頭的路徑  securityMatcher(PathPatternParserServerWebExchangeMatcher(&amp;#34;/auth/**&amp;#34;)) // 規劃Endpoints  authorizeExchange { authorize(&amp;#34;/auth/login&amp;#34;, permitAll) authorize(&amp;#34;/auth/me&amp;#34;, authenticated) authorize(anyExchange, authenticated) } // 關閉 formLogin跟HttpBasic  formLogin { disable() } httpBasic { disable() } } } 規劃完後要思考一件事情，【要如何驗證使用者傳來的資訊?</description>
     </item>
     
     <item>

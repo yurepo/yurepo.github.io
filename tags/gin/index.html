@@ -1,14 +1,112 @@
-<!doctype html><html lang=tw dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>gin | Coding 筆記</title><meta name=keywords content><meta name=description content="用來記錄踩過的坑、用過的API、生活等等"><meta name=author content="Aitay"><link rel=canonical href=https://yurepo.tw/tags/gin/><link href=/assets/css/stylesheet.min.c2154fc596097aa0d15226f5a1cbb40cac159a78bc8a9e54f78fc09c367f8917.css integrity="sha256-whVPxZYJeqDRUib1ocu0DKwVmni8ip5U94/AnDZ/iRc=" rel="preload stylesheet" as=style><link rel=icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.85.0"><link rel=alternate type=application/rss+xml href=https://yurepo.tw/tags/gin/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','G-584CR80G6J','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script><meta property="og:title" content="gin"><meta property="og:description" content="用來記錄踩過的坑、用過的API、生活等等"><meta property="og:type" content="website"><meta property="og:url" content="https://yurepo.tw/tags/gin/"><meta property="og:updated_time" content="2021-03-16T02:12:14+08:00"><meta property="og:site_name" content="Coding 筆記"><meta name=twitter:card content="summary"><meta name=twitter:title content="gin"><meta name=twitter:description content="用來記錄踩過的坑、用過的API、生活等等"><script async src="https://www.googletagmanager.com/gtag/js?id=G-584CR80G6J"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-584CR80G6J',{anonymize_ip:!1})}</script><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Noto+Sans+TC:wght@500&display=swap" rel=stylesheet></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://yurepo.tw accesskey=h title="Coding 筆記 (Alt + H)">Coding 筆記</a>
-<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu onscroll=menu_on_scroll()><li><a href=https://yurepo.tw/posts/ title=文章><span>文章</span></a></li><li><a href=https://yurepo.tw/categories/ title=分類><span>分類</span></a></li><li><a href=https://yurepo.tw/tags/ title=標籤><span>標籤</span></a></li><li><a href=https://yurepo.tw/search/ title="搜尋 (Alt + /)" accesskey=/><span>搜尋</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>gin</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2>Golang Redis Ratelimiter</h2></header><section class=entry-content><p>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，今天主要要來講整個限流過程是如何運作的。
+<!doctype html><html lang=tw dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>gin | Coding 筆記</title>
+<meta name=keywords content>
+<meta name=description content="用來記錄踩過的坑、用過的API、生活等等">
+<meta name=author content="Aitay">
+<link rel=canonical href=https://yurepo.tw/tags/gin/>
+<link href=/assets/css/stylesheet.min.c2154fc596097aa0d15226f5a1cbb40cac159a78bc8a9e54f78fc09c367f8917.css integrity="sha256-whVPxZYJeqDRUib1ocu0DKwVmni8ip5U94/AnDZ/iRc=" rel="preload stylesheet" as=style>
+<link rel=icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=16x16 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=32x32 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
+<link rel=apple-touch-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
+<link rel=mask-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=alternate type=application/rss+xml href=https://yurepo.tw/tags/gin/index.xml>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','G-584CR80G6J','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+<meta property="og:title" content="gin">
+<meta property="og:description" content="用來記錄踩過的坑、用過的API、生活等等">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yurepo.tw/tags/gin/">
+<meta property="og:updated_time" content="2021-03-16T02:12:14+08:00"><meta property="og:site_name" content="Coding 筆記">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="gin">
+<meta name=twitter:description content="用來記錄踩過的坑、用過的API、生活等等">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-584CR80G6J"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-584CR80G6J',{anonymize_ip:!1})}</script>
+<link rel=preconnect href=https://fonts.gstatic.com>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Noto+Sans+TC:wght@500&display=swap" rel=stylesheet>
+</head>
+<body class=list id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<noscript>
+<style type=text/css>#theme-toggle,.top-link{display:none}</style>
+</noscript>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://yurepo.tw accesskey=h title="Coding 筆記 (Alt + H)">Coding 筆記</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu onscroll=menu_on_scroll()>
+<li>
+<a href=https://yurepo.tw/posts/ title=文章>
+<span>文章</span>
+</a>
+</li>
+<li>
+<a href=https://yurepo.tw/categories/ title=分類>
+<span>分類</span>
+</a>
+</li>
+<li>
+<a href=https://yurepo.tw/tags/ title=標籤>
+<span>標籤</span>
+</a>
+</li>
+<li>
+<a href=https://yurepo.tw/search/ title="搜尋 (Alt + /)" accesskey=/>
+<span>搜尋</span>
+</a>
+</li></ul>
+</nav>
+</header>
+<main class=main>
+<header class=page-header>
+<h1>gin</h1>
+</header>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>
+Golang Redis Ratelimiter
+</h2>
+</header>
+<section class=entry-content>
+<p>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，今天主要要來講整個限流過程是如何運作的。
 Github連結
 主要定義了四個文件
 文件名 描述 dto.go 定義及宣告Ratelimiter的基本結構與核心Take()方法 err.go 定義了一些錯誤 ratelimiter.go 存放gin middleware中驗證的邏輯 script.go 存放 lua 腳本及 lua 腳本中輸入變數的結構 我們會將上次更新的時間與剩餘令牌的數量儲存在Redis中，而主要更新的邏輯會寫在script.go，這裡會發現整個操作Redis資料庫的邏輯是使用lua script去實作的，把多個操作Redis的指令包在lua script中，Redis會保證lua script中的多個操作會以Atomic的方式進行，這樣才可以保證每個操作之間不會有競爭情況(Race Condition)發生。 參考資料
 程式碼部分 Golang 接下來就進入到程式碼的部分 首先我定義了 RedisRateLimiter 結構
 dto.go
 type RedisRateLimiter struct { context context.Context scriptSHA1 string client *redis.Client } 這邊將RedisRateLimiter的一些必須用到的變數包裝起來，包裝的變數型別包含了Redis客戶端、LUA Script SHA1(後續會使用evalsha調用已經讀進Redis腳本緩存的Lua script)、Goroutine context。
-這個Repository實現的演算法是Token Bucket演算法，不過也可以利用上述定義的結構去實現不同算法，例如：Leaky Bucket。...</p></section><footer class=entry-footer>March 16, 2021&nbsp;·&nbsp;3 分鐘&nbsp;·&nbsp;Aitay</footer><a class=entry-link aria-label="post link to Golang Redis Ratelimiter" href=https://yurepo.tw/2021/03/golang-redis-ratelimiter/></a></article></main><footer class=footer><span>&copy; 2021 <a href=https://yurepo.tw>Coding 筆記</a></span>
+這個Repository實現的演算法是Token Bucket演算法，不過也可以利用上述定義的結構去實現不同算法，例如：Leaky Bucket。...</p>
+</section>
+<footer class=entry-footer>
+March 16, 2021&nbsp;·&nbsp;3 分鐘&nbsp;·&nbsp;Aitay
+</footer>
+<a class=entry-link aria-label="post link to Golang Redis Ratelimiter" href=https://yurepo.tw/2021/03/golang-redis-ratelimiter/></a>
+</article>
+</main><footer class=footer>
+<span>&copy; 2021 <a href=https://yurepo.tw>Coding 筆記</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
 <span>&#183;</span>
-<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
-<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})});var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>
+<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
+<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</button>
+</a>
+<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})});var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

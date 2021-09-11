@@ -5,21 +5,7 @@
     <link>https://yurepo.tw/tags/kotlin/</link>
     <description>Recent content in Kotlin on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Sep 2020 22:23:28 +0000</lastBuildDate><atom:link href="https://yurepo.tw/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spring WebFlux 應用開發</title>
-      <link>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</link>
-      <pubDate>Thu, 03 Sep 2020 22:23:28 +0000</pubDate>
-      
-      <guid>https://yurepo.tw/2020/09/spring-webflux-%E6%87%89%E7%94%A8%E9%96%8B%E7%99%BC/</guid>
-      <description>使用Spring WebFlux保護您的網站應用(驗證篇) 相信瀏覽到這個Topic的各位一定都對 Reactive 有相當的認識了，本文章將專注在講解 WebFlux &amp;amp; Reactive Security的應用開發，其餘基礎便不再贅述。
-首先我們需要到 Spring Initializr 產生我們的Spring WebFlux Application。
-本文章需要的依賴有：Spring Reactive Web、Spring Security、Spring Configuration Processor(可選) *文章撰寫時 Spring 版本為 2.4.0(M2)，依據版本更新有些地方會稍稍不同。 接下來使用您喜歡的IDE去做開發，本文將使用Intellij IDEA開發
-前置準備 首先先添加Jwt的依賴，我們會於稍後用到。(這部分採用您熟悉的工具也行，也不一定需要用Jwt，PASETO也是不錯的選擇)
-dependencies { // jwt dependency implementation(&amp;quot;com.auth0:java-jwt:3.10.3&amp;quot;) // other depencies ... } 設定網站端點 這部分我們需要配置Spring Security，與以往的Servlet應用不同，不能直接繼承WebSecurityConfigurerAdapter去做設定。 首先，在專案底下新增一Packageauth，把所有驗證、授權邏輯放在這。 在auth資料夾底下再新增一個Packageconfig，標示其為設定檔所在位置。 在config底下新增一類別稱作AuthSecurityConfig。 在AuthSecurityConfig新增以下程式碼規劃網站授權的Endpoints
-@Bean fun authRoute(http: ServerHttpSecurity): SecurityWebFilterChain { return http { // csrf 關閉，方便測試  csrf { disable() } // 只篩選/auth開頭的路徑  securityMatcher(PathPatternParserServerWebExchangeMatcher(&amp;#34;/auth/**&amp;#34;)) // 規劃Endpoints  authorizeExchange { authorize(&amp;#34;/auth/login&amp;#34;, permitAll) authorize(&amp;#34;/auth/me&amp;#34;, authenticated) authorize(anyExchange, authenticated) } // 關閉 formLogin跟HttpBasic  formLogin { disable() } httpBasic { disable() } } } 規劃完後要思考一件事情，【要如何驗證使用者傳來的資訊?</description>
-    </item>
-    
+    <lastBuildDate>Mon, 03 Aug 2020 22:02:41 +0000</lastBuildDate><atom:link href="https://yurepo.tw/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Parsing A Boolean Expression</title>
       <link>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</link>
