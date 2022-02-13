@@ -16,7 +16,7 @@
 <link rel=mask-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.92.2">
 <link rel=alternate type=application/rss+xml href=https://yurepo.tw/posts/index.xml>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','G-584CR80G6J','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
@@ -24,7 +24,7 @@
 <meta property="og:description" content="用來記錄踩過的坑、用過的API、生活等等">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yurepo.tw/posts/">
-<meta property="og:updated_time" content="2021-07-16T18:07:52+08:00"><meta property="og:site_name" content="Coding 筆記">
+<meta property="og:updated_time" content="2022-02-12T00:00:00+00:00"><meta property="og:site_name" content="Coding 筆記">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Posts">
 <meta name=twitter:description content="用來記錄踩過的坑、用過的API、生活等等">
@@ -75,6 +75,29 @@
 <header class=page-header>
 <h1>Posts</h1>
 </header>
+<article class=post-entry>
+<header class=entry-header>
+<h2>
+淺談 Heap - 1. 介紹與實作
+</h2>
+</header>
+<section class=entry-content>
+<p>淺談 Heap 資料結構 前言 這個系列會紀錄我在 Leetcode 上複習的一些常見的東西。基本上會跟著探索卡的進度走。雖然這系列應該早就在課堂上學會了，但我就豆腐腦，雖然已經理解了，但是只要一過一段時間，記憶就這樣被回收了，我都懷疑我腦袋有一個GC回收器…
+優先佇列 (Priority Queue) 再講 Heap 之前，要先介紹一下優先佇列 Priority Queue：
+既然優先佇列的名稱裡都有佇列了，那他肯定跟佇列有關係對吧？
+優先佇列就像是普通的先進先出(FIFO)的佇列一樣，但是其每個元素都有優先權(Priority)這個變數，優先佇列的特點就是：優先權較高者的永遠會先被處理，如果對 Heap 有印象的人，看到現在應該知道為什麼要先介紹優先佇列了。
+那要怎麼實現 Priority Queue 呢？
+Priority Queue 就如同佇列一樣有兩個關鍵方法：push()、pull()
+如果將元素存放在一個未排序列表中， 那push() 操作正常來說只需要O(1)就能完成，因為只是單純的將元素推到這個列表的最後端，範例如下：
+func push(n *Node) { unsortedList = append(unsortedList, n) } 但是pull()操作呢？
+正常來說需要O(n)時間，也就是需要遍歷完整個列表，範例如下：
+func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest := 0, unsortedList[0] for i := 1; i &lt; len(unsortedList); i++ { if highest.Priority &lt; unsortedList[i].Priority { highest = unsortedList[i] maxIndex = i } } // remove highest item unsortedList = append(unsortedList[:maxIndex], unsortedList[maxIndex + 1:]....</p>
+</section>
+<footer class=entry-footer>
+February 12, 2022&nbsp;·&nbsp;3 分鐘&nbsp;·&nbsp;Aitay
+</footer>
+<a class=entry-link aria-label="post link to 淺談 Heap - 1. 介紹與實作" href=https://yurepo.tw/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/></a>
+</article>
 <article class=post-entry>
 <header class=entry-header>
 <h2>
@@ -183,32 +206,13 @@ March 16, 2021&nbsp;·&nbsp;3 分鐘&nbsp;·&nbsp;Aitay
 </footer>
 <a class=entry-link aria-label="post link to Golang Redis Ratelimiter" href=https://yurepo.tw/2021/03/golang-redis-ratelimiter/></a>
 </article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>
-Spring Security 02 - Security Context? 從哪來?
-</h2>
-</header>
-<section class=entry-content>
-<p>上回我們說了SecurityContextHolder主要在做什麼，這回主要討論的是，SecurityContext到底是何方神聖，它從何而來。
-SecurityContext它作為 Spring Security 核心中的一部分，它的作用可說是非常重要的。我們來看看SecurityContext的源碼。
-public interface SecurityContext extends Serializable { /** * 獲取當前已驗證的身分或驗證請求令牌 * * @return the &lt;code>Authentication&lt;/code> or &lt;code>null&lt;/code> if no authentication * information is available */ Authentication getAuthentication(); /** * 改變目前已驗證的身分或刪除驗證資料 * * @param authentication the new &lt;code>Authentication&lt;/code> token, or * &lt;code>null&lt;/code> if no further authentication information should be stored */ void setAuthentication(Authentication authentication); } 可以看到SecurityContext主要是在管理Authentication的物件，那這個Authentication主要是存放當前使用者的身分(廢話)、存放是否已驗證以及取得目前使用者擁有的權限。
-那 SecurityContext 從何而來呢? 同個包內的SecurityContextImpl就是它的實現，裡面都是很基本的邏輯，這次就不放了，可從官方GitHub找到相關源代碼。
-那如何在不同request之間保存SecurityContext呢? 在Spring Security主要有兩個在不同request之間保存SecurityContext的策略，這邊簡單介紹一下，兩者都是ServerSecurityContextRepository的實現。
-NoOpServerSecurityContextRepository: 很廢，當你叫它保存的時候它不會理你，左耳進右耳出，然後你問他那個東西在哪，它會直接說"我不知道，你有跟我講過嗎?"，通常用於無狀態(Stateless)驗證，例如：httpBasic。 WebSessionServerSecurityContextRepository: 好學生，你叫它保存的時候，它會幫你做三件事，1....</p>
-</section>
-<footer class=entry-footer>
-October 8, 2020&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Aitay
-</footer>
-<a class=entry-link aria-label="post link to Spring Security 02 - Security Context? 從哪來?" href=https://yurepo.tw/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/></a>
-</article>
 <footer class=page-footer>
 <nav class=pagination>
 <a class=next href=https://yurepo.tw/posts/page/2/>下一頁 »</a>
 </nav>
 </footer>
 </main><footer class=footer>
-<span>&copy; 2021 <a href=https://yurepo.tw>Coding 筆記</a></span>
+<span>&copy; 2022 <a href=https://yurepo.tw>Coding 筆記</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
 <span>&#183;</span>

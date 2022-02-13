@@ -5,7 +5,25 @@
     <link>https://yurepo.tw/posts/</link>
     <description>Recent content in Posts on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 16 Jul 2021 18:07:52 +0800</lastBuildDate><atom:link href="https://yurepo.tw/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurepo.tw/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>淺談 Heap - 1. 介紹與實作</title>
+      <link>https://yurepo.tw/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/</link>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yurepo.tw/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/</guid>
+      <description>淺談 Heap 資料結構 前言 這個系列會紀錄我在 Leetcode 上複習的一些常見的東西。基本上會跟著探索卡的進度走。雖然這系列應該早就在課堂上學會了，但我就豆腐腦，雖然已經理解了，但是只要一過一段時間，記憶就這樣被回收了，我都懷疑我腦袋有一個GC回收器&amp;hellip;
+優先佇列 (Priority Queue) 再講 Heap 之前，要先介紹一下優先佇列 Priority Queue：
+既然優先佇列的名稱裡都有佇列了，那他肯定跟佇列有關係對吧？
+優先佇列就像是普通的先進先出(FIFO)的佇列一樣，但是其每個元素都有優先權(Priority)這個變數，優先佇列的特點就是：優先權較高者的永遠會先被處理，如果對 Heap 有印象的人，看到現在應該知道為什麼要先介紹優先佇列了。
+那要怎麼實現 Priority Queue 呢？
+Priority Queue 就如同佇列一樣有兩個關鍵方法：push()、pull()
+如果將元素存放在一個未排序列表中， 那push() 操作正常來說只需要O(1)就能完成，因為只是單純的將元素推到這個列表的最後端，範例如下：
+func push(n *Node) { unsortedList = append(unsortedList, n) } 但是pull()操作呢？
+正常來說需要O(n)時間，也就是需要遍歷完整個列表，範例如下：
+func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest := 0, unsortedList[0] for i := 1; i &amp;lt; len(unsortedList); i++ { if highest.Priority &amp;lt; unsortedList[i].Priority { highest = unsortedList[i] maxIndex = i } } // remove highest item  unsortedList = append(unsortedList[:maxIndex], unsortedList[maxIndex + 1:].</description>
+    </item>
+    
     <item>
       <title>臺中科大 110 學年度行事曆</title>
       <link>https://yurepo.tw/2021/07/%E8%87%BA%E4%B8%AD%E7%A7%91%E5%A4%A7-110-%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%A1%8C%E4%BA%8B%E6%9B%86/</link>
