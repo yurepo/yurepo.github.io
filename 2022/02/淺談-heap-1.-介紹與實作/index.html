@@ -178,7 +178,7 @@ February 12, 2022&nbsp;·&nbsp;3 分鐘&nbsp;·&nbsp;Aitay
 </li>
 </ul>
 <p>Heap 主要有分兩種：<strong>最大堆(Max-Heap)、最小堆(Min-Heap)</strong>。</p>
-<p><img src=/img/heap/min-max-heap-example.png alt=最小堆、最大堆範例></p>
+<p><img src=/img/heap/min-max-heap.png alt=最小堆、最大堆範例></p>
 <p>Heap 通常會使用 <strong>陣列</strong> 實作而不是傳統的鏈表(linked list)，因為陣列恰巧滿足完全二元樹的定義：<strong>節點由上至下、由左至右排列</strong>，而且相對於鏈表來說，陣列在記憶體中是連續的，所以存取元素相對快速，內存效率較高，並且隨機訪問的時間複雜度為<code>O(1)</code>。</p>
 <h3 id=heap-插入操作>Heap 插入操作<a hidden class=anchor aria-hidden=true href=#heap-插入操作>#</a></h3>
 <p>Heap 插入就只分兩個步驟，第一步插入元素，第二步比較子元素跟父元素之間的大小，若子元素較小/大，則交換，交換到子元素在合適的位置。</p>
