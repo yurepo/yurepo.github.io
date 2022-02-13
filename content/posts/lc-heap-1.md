@@ -73,7 +73,7 @@ func pull() *Node {
 
 Heap 主要有分兩種：**最大堆(Max-Heap)、最小堆(Min-Heap)**。
 
-![最小堆、最大堆範例](/img/heap/min-max-heap-example.png)
+![最小堆、最大堆範例](/img/heap/min-max-heap.png)
 
 Heap 通常會使用 **陣列** 實作而不是傳統的鏈表(linked list)，因為陣列恰巧滿足完全二元樹的定義：**節點由上至下、由左至右排列**，而且相對於鏈表來說，陣列在記憶體中是連續的，所以存取元素相對快速，內存效率較高，並且隨機訪問的時間複雜度為`O(1)`。
 
