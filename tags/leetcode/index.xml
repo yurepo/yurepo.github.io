@@ -19,9 +19,9 @@
 那要怎麼實現 Priority Queue 呢？
 Priority Queue 就如同佇列一樣有兩個關鍵方法：push()、pull()
 如果將元素存放在一個未排序列表中， 那push() 操作正常來說只需要O(1)就能完成，因為只是單純的將元素推到這個列表的最後端，範例如下：
-func push(n *Node) { unsortedList = append(unsortedList, n) } 但是pull()操作呢？
+func push(n *Node) {  unsortedList = append(unsortedList, n) } 但是pull()操作呢？
 正常來說需要O(n)時間，也就是需要遍歷完整個列表，範例如下：
-func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest := 0, unsortedList[0] for i := 1; i &amp;lt; len(unsortedList); i++ { if highest.Priority &amp;lt; unsortedList[i].Priority { highest = unsortedList[i] maxIndex = i } } // remove highest item  unsortedList = append(unsortedList[:maxIndex], unsortedList[maxIndex + 1:].</description>
+func pull() *Node {  if len(unsortedList) == 0 {  return nil  }   maxIndex, highest := 0, unsortedList[0]  for i := 1; i &amp;lt; len(unsortedList); i++ {  if highest.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest :
       <guid>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</guid>
       <description>題目要求是要輸入一個運算式回傳該運算式的結果 有下列規則
  &amp;ldquo;t&amp;rdquo;，代表為 True &amp;ldquo;f&amp;rdquo;，代表為 False &amp;ldquo;!(expr)&amp;quot;，表示將expr得出的布林值反向 &amp;ldquo;&amp;amp;(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做AND &amp;ldquo;|(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做OR  馬上進入程式碼撰寫的部分，主要是以遞迴解決 我的想法應該算蠻差的，效能那些部分都不能強求，所以僅放上來做參考，歡迎底下討論
-class Solution { companion object{ // 運算子列表  val operator = arrayOf(&amp;#39;!&amp;#39;, &amp;#39;&amp;amp;&amp;#39;, &amp;#39;|&amp;#39;) } fun parseBoolExpr(expression: String): Boolean { // 如果運算式為空，回傳 `False`  if (expression.isEmpty()) return false return expr(expression) } fun expr(expression: String): Boolean{ // 如果運算式的首個元素不包含於運算子列表(!、&amp;amp;、|)，回傳 `False`  if (!operator.contains(expression[0])) return false // 取得運算子  val mod = expression[0] // 檢查運算子後的下一個字元是否為 `(`  val optStart = if(expression[1] == &amp;#39;(&amp;#39;) 1 else throw RuntimeException(&amp;#34;not valid pattern&amp;#34;) // 檢查運算式的最後一個字源是否為 `)`  val optEnd = if(expression[expression.</description>
+class Solution {   companion object{  // 運算子列表  val operator = arrayOf(&amp;#39;!&amp;#39;, &amp;#39;&amp;amp;&amp;#39;, &amp;#39;|&amp;#39;)  }   fun parseBoolExpr(expression: String): Boolean {  // 如果運算式為空，回傳 `False`  if (expression.isEmpty())  return false  return expr(expression)  }   fun expr(expression: String): Boolean{  // 如果運算式的首個元素不包含於運算子列表(!、&amp;amp;、|)，回傳 `False`  if (!operator.contains(expression[0]))  return false   // 取得運算子  val mod = expression[0]  // 檢查運算子後的下一個字元是否為 `(`  val optStart = if(expression[1] == &amp;#39;(&amp;#39;) 1 else throw RuntimeException(&amp;#34;not valid pattern&amp;#34;)  // 檢查運算式的最後一個字源是否為 `)`  val optEnd = if(expression[expression.</description>
     </item>
     
   </channel>

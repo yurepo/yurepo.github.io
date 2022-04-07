@@ -1,87 +1,6 @@
-<!doctype html><html lang=tw dir=auto>
-<head><meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=robots content="index, follow">
-<title>LeetCode | Coding 筆記</title>
-<meta name=keywords content>
-<meta name=description content="用來記錄踩過的坑、用過的API、生活等等">
-<meta name=author content="Aitay">
-<link rel=canonical href=https://yurepo.tw/tags/leetcode/>
-<link href=/assets/css/stylesheet.min.c2154fc596097aa0d15226f5a1cbb40cac159a78bc8a9e54f78fc09c367f8917.css integrity="sha256-whVPxZYJeqDRUib1ocu0DKwVmni8ip5U94/AnDZ/iRc=" rel="preload stylesheet" as=style>
-<link rel=icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
-<link rel=icon type=image/png sizes=16x16 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
-<link rel=icon type=image/png sizes=32x32 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
-<link rel=apple-touch-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
-<link rel=mask-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.92.2">
-<link rel=alternate type=application/rss+xml href=https://yurepo.tw/tags/leetcode/index.xml>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','G-584CR80G6J','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-<meta property="og:title" content="LeetCode">
-<meta property="og:description" content="用來記錄踩過的坑、用過的API、生活等等">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yurepo.tw/tags/leetcode/">
-<meta property="og:updated_time" content="2022-02-12T00:00:00+00:00"><meta property="og:site_name" content="Coding 筆記">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="LeetCode">
-<meta name=twitter:description content="用來記錄踩過的坑、用過的API、生活等等">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-584CR80G6J"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-584CR80G6J',{anonymize_ip:!1})}</script>
-<link rel=preconnect href=https://fonts.gstatic.com>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Noto+Sans+TC:wght@500&display=swap" rel=stylesheet>
-</head>
-<body class=list id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<noscript>
-<style type=text/css>#theme-toggle,.top-link{display:none}</style>
-</noscript>
-<header class=header>
-<nav class=nav>
-<div class=logo>
-<a href=https://yurepo.tw accesskey=h title="Coding 筆記 (Alt + H)">Coding 筆記</a>
-<span class=logo-switches>
-<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-</button>
-</span>
-</div>
-<ul id=menu onscroll=menu_on_scroll()>
-<li>
-<a href=https://yurepo.tw/posts/ title=文章>
-<span>文章</span>
-</a>
-</li>
-<li>
-<a href=https://yurepo.tw/categories/ title=分類>
-<span>分類</span>
-</a>
-</li>
-<li>
-<a href=https://yurepo.tw/tags/ title=標籤>
-<span>標籤</span>
-</a>
-</li>
-<li>
-<a href=https://yurepo.tw/search/ title="搜尋 (Alt + /)" accesskey=/>
-<span>搜尋</span>
-</a>
-</li></ul>
-</nav>
-</header>
-<main class=main>
-<header class=page-header>
-<h1>LeetCode</h1>
-</header>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>
-淺談 Heap - 1. 介紹與實作
-</h2>
-</header>
-<section class=entry-content>
-<p>淺談 Heap 資料結構 前言 這個系列會紀錄我在 Leetcode 上複習的一些常見的東西。基本上會跟著探索卡的進度走。雖然這系列應該早就在課堂上學會了，但我就豆腐腦，雖然已經理解了，但是只要一過一段時間，記憶就這樣被回收了，我都懷疑我腦袋有一個GC回收器…
+<!doctype html><html lang=tw dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>LeetCode | Coding 筆記</title><meta name=keywords content><meta name=description content="用來記錄踩過的坑、用過的API、生活等等"><meta name=author content="Aitay"><link rel=canonical href=https://yurepo.tw/tags/leetcode/><link href=/assets/css/stylesheet.min.c2154fc596097aa0d15226f5a1cbb40cac159a78bc8a9e54f78fc09c367f8917.css integrity="sha256-whVPxZYJeqDRUib1ocu0DKwVmni8ip5U94/AnDZ/iRc=" rel="preload stylesheet" as=style><link rel=icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://yurepo.tw/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.96.0"><link rel=alternate type=application/rss+xml href=https://yurepo.tw/tags/leetcode/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-584CR80G6J","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><meta property="og:title" content="LeetCode"><meta property="og:description" content="用來記錄踩過的坑、用過的API、生活等等"><meta property="og:type" content="website"><meta property="og:url" content="https://yurepo.tw/tags/leetcode/"><meta property="og:updated_time" content="2022-02-12T00:00:00+00:00"><meta property="og:site_name" content="Coding 筆記"><meta name=twitter:card content="summary"><meta name=twitter:title content="LeetCode"><meta name=twitter:description content="用來記錄踩過的坑、用過的API、生活等等"><script async src="https://www.googletagmanager.com/gtag/js?id=G-584CR80G6J"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-584CR80G6J",{anonymize_ip:!1})}</script><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Noto+Sans+TC:wght@500&display=swap" rel=stylesheet></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://yurepo.tw accesskey=h title="Coding 筆記 (Alt + H)">Coding 筆記</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu onscroll=menu_on_scroll()><li><a href=https://yurepo.tw/posts/ title=文章><span>文章</span></a></li><li><a href=https://yurepo.tw/categories/ title=分類><span>分類</span></a></li><li><a href=https://yurepo.tw/tags/ title=標籤><span>標籤</span></a></li><li><a href=https://yurepo.tw/search/ title="搜尋 (Alt + /)" accesskey=/><span>搜尋</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>LeetCode</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2>淺談 Heap - 1. 介紹與實作</h2></header><section class=entry-content><p>淺談 Heap 資料結構 前言 這個系列會紀錄我在 Leetcode 上複習的一些常見的東西。基本上會跟著探索卡的進度走。雖然這系列應該早就在課堂上學會了，但我就豆腐腦，雖然已經理解了，但是只要一過一段時間，記憶就這樣被回收了，我都懷疑我腦袋有一個GC回收器…
 優先佇列 (Priority Queue) 再講 Heap 之前，要先介紹一下優先佇列 Priority Queue：
 既然優先佇列的名稱裡都有佇列了，那他肯定跟佇列有關係對吧？
 優先佇列就像是普通的先進先出(FIFO)的佇列一樣，但是其每個元素都有優先權(Priority)這個變數，優先佇列的特點就是：優先權較高者的永遠會先被處理，如果對 Heap 有印象的人，看到現在應該知道為什麼要先介紹優先佇列了。
@@ -90,41 +9,11 @@ Priority Queue 就如同佇列一樣有兩個關鍵方法：push()、pull()
 如果將元素存放在一個未排序列表中， 那push() 操作正常來說只需要O(1)就能完成，因為只是單純的將元素推到這個列表的最後端，範例如下：
 func push(n *Node) { unsortedList = append(unsortedList, n) } 但是pull()操作呢？
 正常來說需要O(n)時間，也就是需要遍歷完整個列表，範例如下：
-func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest := 0, unsortedList[0] for i := 1; i &lt; len(unsortedList); i++ { if highest.Priority &lt; unsortedList[i].Priority { highest = unsortedList[i] maxIndex = i } } // remove highest item unsortedList = append(unsortedList[:maxIndex], unsortedList[maxIndex + 1:]....</p>
-</section>
-<footer class=entry-footer>
-February 12, 2022&nbsp;·&nbsp;3 分鐘&nbsp;·&nbsp;Aitay
-</footer>
-<a class=entry-link aria-label="post link to 淺談 Heap - 1. 介紹與實作" href=https://yurepo.tw/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>
-Parsing A Boolean Expression
-</h2>
-</header>
-<section class=entry-content>
-<p>題目要求是要輸入一個運算式回傳該運算式的結果 有下列規則
+func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest := 0, unsortedList[0] for i := 1; i &lt; len(unsortedList); i++ { if highest....</p></section><footer class=entry-footer>February 12, 2022&nbsp;·&nbsp;3 分鐘&nbsp;·&nbsp;Aitay</footer><a class=entry-link aria-label="post link to 淺談 Heap - 1. 介紹與實作" href=https://yurepo.tw/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>Parsing A Boolean Expression</h2></header><section class=entry-content><p>題目要求是要輸入一個運算式回傳該運算式的結果 有下列規則
 “t”，代表為 True “f”，代表為 False “!(expr)"，表示將expr得出的布林值反向 “&(expr1,expr2,…)"，表示將所有expr{num}做AND “|(expr1,expr2,…)"，表示將所有expr{num}做OR 馬上進入程式碼撰寫的部分，主要是以遞迴解決 我的想法應該算蠻差的，效能那些部分都不能強求，所以僅放上來做參考，歡迎底下討論
-class Solution { companion object{ // 運算子列表 val operator = arrayOf('!', '&', '|') } fun parseBoolExpr(expression: String): Boolean { // 如果運算式為空，回傳 `False` if (expression.isEmpty()) return false return expr(expression) } fun expr(expression: String): Boolean{ // 如果運算式的首個元素不包含於運算子列表(!、&、|)，回傳 `False` if (!operator.contains(expression[0])) return false // 取得運算子 val mod = expression[0] // 檢查運算子後的下一個字元是否為 `(` val optStart = if(expression[1] == '(') 1 else throw RuntimeException("not valid pattern") // 檢查運算式的最後一個字源是否為 `)` val optEnd = if(expression[expression....</p>
-</section>
-<footer class=entry-footer>
-August 3, 2020&nbsp;·&nbsp;2 分鐘&nbsp;·&nbsp;Aitay
-</footer>
-<a class=entry-link aria-label="post link to Parsing A Boolean Expression" href=https://yurepo.tw/2020/08/parsing-a-boolean-expression/></a>
-</article>
-</main><footer class=footer>
-<span>&copy; 2022 <a href=https://yurepo.tw>Coding 筆記</a></span>
+class Solution { companion object{ // 運算子列表 val operator = arrayOf('!', '&', '|') } fun parseBoolExpr(expression: String): Boolean { // 如果運算式為空，回傳 `False` if (expression.isEmpty()) return false return expr(expression) } fun expr(expression: String): Boolean{ // 如果運算式的首個元素不包含於運算子列表(!、&、|)，回傳 `False` if (!operator.contains(expression[0])) return false // 取得運算子 val mod = expression[0] // 檢查運算子後的下一個字元是否為 `(` val optStart = if(expression[1] == '(') 1 else throw RuntimeException("not valid pattern") // 檢查運算式的最後一個字源是否為 `)` val optEnd = if(expression[expression....</p></section><footer class=entry-footer>August 3, 2020&nbsp;·&nbsp;2 分鐘&nbsp;·&nbsp;Aitay</footer><a class=entry-link aria-label="post link to Parsing A Boolean Expression" href=https://yurepo.tw/2020/08/parsing-a-boolean-expression/></a></article></main><footer class=footer><span>&copy; 2022 <a href=https://yurepo.tw>Coding 筆記</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
 <span>&#183;</span>
-<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span>
-</footer>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
-<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</button>
-</a>
-<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})});var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
-</body>
-</html>
+<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById("menu").scrollLeft=localStorage.getItem("menu-scroll-position"))},document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})});var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById("menu").scrollLeft)}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

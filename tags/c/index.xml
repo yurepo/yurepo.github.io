@@ -13,9 +13,9 @@
       
       <guid>https://yurepo.tw/2020/08/helloworld-jvm/</guid>
       <description>HelloWorld | JVM 因為是部落格上的第一篇，所以想來測試基本語法高亮 首先是Java
-// 測試Java註解 public static void main(string[] args){ System.out.println(&amp;#34;hello world&amp;#34;); } 接下來是Kotlin
-fun main(){ &amp;#34;hello world&amp;#34;.println() } fun String.println(){ println(this) } 最後基本的C語言好了
-int main(){ printf(&amp;#34;hello world&amp;#34;); return 0; } </description>
+// 測試Java註解 public static void main(string[] args){  System.out.println(&amp;#34;hello world&amp;#34;); } 接下來是Kotlin
+fun main(){  &amp;#34;hello world&amp;#34;.println() }  fun String.println(){  println(this) } 最後基本的C語言好了
+int main(){  printf(&amp;#34;hello world&amp;#34;);  return 0; } </description>
     </item>
     
   </channel>

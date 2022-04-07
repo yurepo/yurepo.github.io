@@ -23,8 +23,8 @@ hugo new site &amp;lt;資料夾名稱&amp;gt; 出現以下畫面就說明安裝�
 第三步，添加主題 接下來到官方的主題網站挑選您喜歡的主題，此範例使用ananke主題。
 只需要打以下指令就可以新增主題了
 cd &amp;lt;資料夾名稱&amp;gt; git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 接著修改config.toml文件，詳細的設定方式可以參照官網
-# 基本設置 baseURL = &amp;#34;&amp;lt;網址&amp;gt;&amp;#34; title = &amp;#34;&amp;lt;標題&amp;gt;&amp;#34; languageCode = &amp;#34;en-us&amp;#34; # 主題設置 theme=&amp;#34;ananke&amp;#34; # 連結設置 [permalinks] posts = &amp;#34;/:year/:month/:title/&amp;#34; 第四步，建立第一篇貼文 接著輸入以下指令建立第一篇貼文
-hugo new posts/hello-world.md 接著打開Markdown編輯工具(e.g. Visual Studio Code)，寫點簡單的文章並存檔。</description>
+ # 基本設置 baseURL = &amp;#34;&amp;lt;網址&amp;gt;&amp;#34; title = &amp;#34;&amp;lt;標題&amp;gt;&amp;#34; languageCode = &amp;#34;en-us&amp;#34;  # 主題設置 theme=&amp;#34;ananke&amp;#34;  # 連結設置 [permalinks]  posts = &amp;#34;/:year/:month/:title/&amp;#34; 第四步，建立第一篇貼文 接著輸入以下指令建立第一篇貼文
+hugo new posts/hello-world.</description>
     </item>
     
   </channel>
