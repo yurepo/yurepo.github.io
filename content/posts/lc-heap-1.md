@@ -109,7 +109,7 @@ func (h *Heap) Insert(val int) {
 	for {
 		// 取得父節點位置
         parent := (current - 1) / 2
-        if parent == current || h.data[parent] > h.data[current] {
+        if parent == current || h.data[parent] < h.data[current] {
             break
         }
 		h.data[parent], h.data[current] = h.data[current], h.data[parent]
