@@ -104,14 +104,16 @@ func NewHeap() *Heap {
 
 func (h *Heap) Insert(val int) {
 	h.data = append(h.data, val)
-	// 取得當前節點以及父節點的位置
+	// 取得當前節點位置
 	current := len(h.data) - 1
-	parent := current / 2
-	// 如果父節點大於當前節點，就交換，並繼續往上比較
-	for current > 0 && h.data[parent] > h.data[current] {
+	for {
+		// 取得父節點位置
+        parent := (current - 1) / 2
+        if parent == current || h.data[parent] > h.data[current] {
+            break
+        }
 		h.data[parent], h.data[current] = h.data[current], h.data[parent]
 		current = parent
-		parent = (current - 1) / 2
 	}
 }
 
