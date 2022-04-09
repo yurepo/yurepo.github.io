@@ -13,7 +13,7 @@ language:
   tw:
     title: Coding 筆記
 
-googleAnalytics: G-584CR80G6J
+#googleAnalytics: G-584CR80G6J
 
 # disqus
 disqusShortname: airay-blog
