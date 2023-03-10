@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>hugo on Coding 筆記</title>
     <link>https://yurepo.tw/categories/hugo/</link>
@@ -14,24 +14,25 @@
       <guid>https://yurepo.tw/2021/03/hugo-%E6%B7%BB%E5%8A%A0-google-analytics-4-%E7%AD%86%E8%A8%98/</guid>
       <description>Hugo 添加 Google Analytics 4 筆記 前言 最近HUGO更新了0.82.0版本，此版本對比上一版本改進不大，對我來說，最有感的應該是增加了內置Google Analytics 4的支持，也就是可以使用G-開頭的評估ID而不是UA-開頭的追蹤ID，那首先就來回顧一下Universal Analytics(GA3)與Google Analytics 4。
 GA4 x GA3 GA3 (Universal Analytics) UA於2012年10月發布，在上一代GA中，主要以網站會話(session)以及網站頁面為主，資料的來源主要從三個管道收集
- HTTP請求 瀏覽器/系統資訊 第一方Cookie  其中，我們最容易見到的是帶有utm開頭參數的連結，範例如下
+HTTP請求 瀏覽器/系統資訊 第一方Cookie 其中，我們最容易見到的是帶有utm開頭參數的連結，範例如下
 http://example.com/?utm_source=active%20users&amp;amp;utm_medium=email&amp;amp;utm_campaign=feature...
 這種分享連結後方都會添加一些utm開頭之參數，這個utm參數會記錄其來源、媒介、名稱，等到使用者造訪網站時，在網站上嵌入的UA會去收集這些參數並發送至Google Analytics，讓網站管理者檢視、分析成效。
 上方的範例僅限於使用者是被哪個社群網站、哪個廣告以及從哪個來源(e.g. email、app)吸引而進入網站，那如何去收集使用者在網站內部的活動呢😶?
 UA擁有許多不同匹配去收集使用者在網站內部的活動，這邊介紹最常見的三種：
-  網頁瀏覽匹配
+網頁瀏覽匹配
 使用者載入嵌有UA的頁面時便會觸發此匹配，是最常觸發的操作。
-  事件匹配
+事件匹配
 追蹤使用者在網站上特定元素的每次互動，例如：開啟的網址、播放的影片等。
-  交易匹配
+交易匹配
 傳送電子商務購買的相關資料，例如：售出的產品、交易ID、庫存計量單位(SKU)等等。
-  除上述三種之外也有許多其他匹配，像是社交匹配、網頁操作時間匹配等
+除上述三種之外也有許多其他匹配，像是社交匹配、網頁操作時間匹配等
 GA4 (Google Analytics 4) GA4於2020年10月16日發布，在這一代GA中，主要採用以事件(event-based)的方式去收集資料，相較於上一代GA3，GA4提供了更彈性、更智慧、跨平台的數據蒐集方法。
 GA4與GA3同樣都使用gtag.js向Google Analytics發送事件數據。
 在以往的GA3，如果想要評估App端上的使用數據，必須使用Google Analytics for Firebase或是Google Analytics APP view建立不同的GA資源(Property)，想要結合網頁端及App端的使用數據相對來說是較不容易的。
 GA4 整合了 Web 端及 APP 端的資料，並可以將其結合在一起進行分析，也可以單獨蒐集網站上的資料。
 GA4默認提供了六種增強性評估
- 網頁瀏覽 捲動 外連點擊 站內搜尋 影片參與 檔案下載  若要詳細了解GA4的功能及比較，可至【一表看懂】新版 GA4 與舊版 GA 差在哪裡？新舊版本功能比較懶人包！</description>
+網頁瀏覽 捲動 外連點擊 站內搜尋 影片參與 檔案下載 若要詳細了解GA4的功能及比較，可至【一表看懂】新版 GA4 與舊版 GA 差在哪裡？新舊版本功能比較懶人包！
+TL;DR：新版GA4相較於上一代GA3更彈性、更智慧(後臺方面)、跨平台，但GA3上有的功能並不一定在GA4上可以找到替代品，若是打算由GA3遷移到GA4，可保留GA3和GA4兩者。不過對於Hugo使用者來說，不管是選擇GA3或是GA4都應該可以達成目的。</description>
     </item>
     
     <item>
@@ -51,8 +52,8 @@ hugo new site &amp;lt;資料夾名稱&amp;gt; 出現以下畫面就說明安裝�
 第三步，添加主題 接下來到官方的主題網站挑選您喜歡的主題，此範例使用ananke主題。
 只需要打以下指令就可以新增主題了
 cd &amp;lt;資料夾名稱&amp;gt; git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 接著修改config.toml文件，詳細的設定方式可以參照官網
- # 基本設置 baseURL = &amp;#34;&amp;lt;網址&amp;gt;&amp;#34; title = &amp;#34;&amp;lt;標題&amp;gt;&amp;#34; languageCode = &amp;#34;en-us&amp;#34;  # 主題設置 theme=&amp;#34;ananke&amp;#34;  # 連結設置 [permalinks]  posts = &amp;#34;/:year/:month/:title/&amp;#34; 第四步，建立第一篇貼文 接著輸入以下指令建立第一篇貼文
-hugo new posts/hello-world.</description>
+# 基本設置 baseURL = &amp;#34;&amp;lt;網址&amp;gt;&amp;#34; title = &amp;#34;&amp;lt;標題&amp;gt;&amp;#34; languageCode = &amp;#34;en-us&amp;#34; # 主題設置 theme=&amp;#34;ananke&amp;#34; # 連結設置 [permalinks] posts = &amp;#34;/:year/:month/:title/&amp;#34; 第四步，建立第一篇貼文 接著輸入以下指令建立第一篇貼文
+hugo new posts/hello-world.md 接著打開Markdown編輯工具(e.g. Visual Studio Code)，寫點簡單的文章並存檔。</description>
     </item>
     
   </channel>

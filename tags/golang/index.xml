@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>golang on Coding 筆記</title>
     <link>https://yurepo.tw/tags/golang/</link>
@@ -15,10 +15,13 @@
       <description>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，今天主要要來講整個限流過程是如何運作的。
 Github連結
 主要定義了四個文件
-   文件名 描述     dto.go 定義及宣告Ratelimiter的基本結構與核心Take()方法   err.go 定義了一些錯誤   ratelimiter.go 存放gin middleware中驗證的邏輯   script.go 存放 lua 腳本及 lua 腳本中輸入變數的結構    我們會將上次更新的時間與剩餘令牌的數量儲存在Redis中，而主要更新的邏輯會寫在script.go，這裡會發現整個操作Redis資料庫的邏輯是使用lua script去實作的，把多個操作Redis的指令包在lua script中，Redis會保證lua script中的多個操作會以Atomic的方式進行，這樣才可以保證每個操作之間不會有競爭情況(Race Condition)發生。 參考資料
+文件名 描述 dto.go 定義及宣告Ratelimiter的基本結構與核心Take()方法 err.go 定義了一些錯誤 ratelimiter.go 存放gin middleware中驗證的邏輯 script.go 存放 lua 腳本及 lua 腳本中輸入變數的結構 我們會將上次更新的時間與剩餘令牌的數量儲存在Redis中，而主要更新的邏輯會寫在script.go，這裡會發現整個操作Redis資料庫的邏輯是使用lua script去實作的，把多個操作Redis的指令包在lua script中，Redis會保證lua script中的多個操作會以Atomic的方式進行，這樣才可以保證每個操作之間不會有競爭情況(Race Condition)發生。 參考資料
 程式碼部分 Golang 接下來就進入到程式碼的部分 首先我定義了 RedisRateLimiter 結構
 dto.go
-type RedisRateLimiter struct {  context context.Context  scriptSHA1 string  client *redis.Client } 這邊將RedisRateLimiter的一些必須用到的變數包裝起來，包裝的變數型別包含了Redis客戶端、LUA Script SHA1(後續會使用evalsha調用已經讀進Redis腳本緩存的Lua script)、Goroutine context。</description>
+type RedisRateLimiter struct { context context.Context scriptSHA1 string client *redis.Client } 這邊將RedisRateLimiter的一些必須用到的變數包裝起來，包裝的變數型別包含了Redis客戶端、LUA Script SHA1(後續會使用evalsha調用已經讀進Redis腳本緩存的Lua script)、Goroutine context。
+這個Repository實現的演算法是Token Bucket演算法，不過也可以利用上述定義的結構去實現不同算法，例如：Leaky Bucket。
+dto.go
+type TokenBucketRedisRateLimiter struct { RedisRateLimiter identifier string interval time.Duration maxRequest int } func (r *TokenBucketRedisRateLimiter) Take(request TokenBucketLuaRequest) *LimiterResponse { result, err := r.</description>
     </item>
     
   </channel>

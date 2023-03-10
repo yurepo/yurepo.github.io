@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Coding 筆記</title>
     <link>https://yurepo.tw/</link>
@@ -19,9 +19,9 @@
 那要怎麼實現 Priority Queue 呢？
 Priority Queue 就如同佇列一樣有兩個關鍵方法：push()、pull()
 如果將元素存放在一個未排序列表中， 那push() 操作正常來說只需要O(1)就能完成，因為只是單純的將元素推到這個列表的最後端，範例如下：
-func push(n *Node) {  unsortedList = append(unsortedList, n) } 但是pull()操作呢？
+func push(n *Node) { unsortedList = append(unsortedList, n) } 但是pull()操作呢？
 正常來說需要O(n)時間，也就是需要遍歷完整個列表，範例如下：
-func pull() *Node {  if len(unsortedList) == 0 {  return nil  }   maxIndex, highest := 0, unsortedList[0]  for i := 1; i &amp;lt; len(unsortedList); i++ {  if highest.</description>
+func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest := 0, unsortedList[0] for i := 1; i &amp;lt; len(unsortedList); i++ { if highest.Priority &amp;lt; unsortedList[i].Priority { highest = unsortedList[i] maxIndex = i } } // remove highest item unsortedList = append(unsortedList[:maxIndex], unsortedList[maxIndex + 1:].</description>
     </item>
     
     <item>
@@ -55,24 +55,25 @@ Q&amp;amp;A 我想可能會有人問說：為什麼不開源給其他人自己�
       <guid>https://yurepo.tw/2021/03/hugo-%E6%B7%BB%E5%8A%A0-google-analytics-4-%E7%AD%86%E8%A8%98/</guid>
       <description>Hugo 添加 Google Analytics 4 筆記 前言 最近HUGO更新了0.82.0版本，此版本對比上一版本改進不大，對我來說，最有感的應該是增加了內置Google Analytics 4的支持，也就是可以使用G-開頭的評估ID而不是UA-開頭的追蹤ID，那首先就來回顧一下Universal Analytics(GA3)與Google Analytics 4。
 GA4 x GA3 GA3 (Universal Analytics) UA於2012年10月發布，在上一代GA中，主要以網站會話(session)以及網站頁面為主，資料的來源主要從三個管道收集
- HTTP請求 瀏覽器/系統資訊 第一方Cookie  其中，我們最容易見到的是帶有utm開頭參數的連結，範例如下
+HTTP請求 瀏覽器/系統資訊 第一方Cookie 其中，我們最容易見到的是帶有utm開頭參數的連結，範例如下
 http://example.com/?utm_source=active%20users&amp;amp;utm_medium=email&amp;amp;utm_campaign=feature...
 這種分享連結後方都會添加一些utm開頭之參數，這個utm參數會記錄其來源、媒介、名稱，等到使用者造訪網站時，在網站上嵌入的UA會去收集這些參數並發送至Google Analytics，讓網站管理者檢視、分析成效。
 上方的範例僅限於使用者是被哪個社群網站、哪個廣告以及從哪個來源(e.g. email、app)吸引而進入網站，那如何去收集使用者在網站內部的活動呢😶?
 UA擁有許多不同匹配去收集使用者在網站內部的活動，這邊介紹最常見的三種：
-  網頁瀏覽匹配
+網頁瀏覽匹配
 使用者載入嵌有UA的頁面時便會觸發此匹配，是最常觸發的操作。
-  事件匹配
+事件匹配
 追蹤使用者在網站上特定元素的每次互動，例如：開啟的網址、播放的影片等。
-  交易匹配
+交易匹配
 傳送電子商務購買的相關資料，例如：售出的產品、交易ID、庫存計量單位(SKU)等等。
-  除上述三種之外也有許多其他匹配，像是社交匹配、網頁操作時間匹配等
+除上述三種之外也有許多其他匹配，像是社交匹配、網頁操作時間匹配等
 GA4 (Google Analytics 4) GA4於2020年10月16日發布，在這一代GA中，主要採用以事件(event-based)的方式去收集資料，相較於上一代GA3，GA4提供了更彈性、更智慧、跨平台的數據蒐集方法。
 GA4與GA3同樣都使用gtag.js向Google Analytics發送事件數據。
 在以往的GA3，如果想要評估App端上的使用數據，必須使用Google Analytics for Firebase或是Google Analytics APP view建立不同的GA資源(Property)，想要結合網頁端及App端的使用數據相對來說是較不容易的。
 GA4 整合了 Web 端及 APP 端的資料，並可以將其結合在一起進行分析，也可以單獨蒐集網站上的資料。
 GA4默認提供了六種增強性評估
- 網頁瀏覽 捲動 外連點擊 站內搜尋 影片參與 檔案下載  若要詳細了解GA4的功能及比較，可至【一表看懂】新版 GA4 與舊版 GA 差在哪裡？新舊版本功能比較懶人包！</description>
+網頁瀏覽 捲動 外連點擊 站內搜尋 影片參與 檔案下載 若要詳細了解GA4的功能及比較，可至【一表看懂】新版 GA4 與舊版 GA 差在哪裡？新舊版本功能比較懶人包！
+TL;DR：新版GA4相較於上一代GA3更彈性、更智慧(後臺方面)、跨平台，但GA3上有的功能並不一定在GA4上可以找到替代品，若是打算由GA3遷移到GA4，可保留GA3和GA4兩者。不過對於Hugo使用者來說，不管是選擇GA3或是GA4都應該可以達成目的。</description>
     </item>
     
     <item>
@@ -92,8 +93,8 @@ hugo new site &amp;lt;資料夾名稱&amp;gt; 出現以下畫面就說明安裝�
 第三步，添加主題 接下來到官方的主題網站挑選您喜歡的主題，此範例使用ananke主題。
 只需要打以下指令就可以新增主題了
 cd &amp;lt;資料夾名稱&amp;gt; git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 接著修改config.toml文件，詳細的設定方式可以參照官網
- # 基本設置 baseURL = &amp;#34;&amp;lt;網址&amp;gt;&amp;#34; title = &amp;#34;&amp;lt;標題&amp;gt;&amp;#34; languageCode = &amp;#34;en-us&amp;#34;  # 主題設置 theme=&amp;#34;ananke&amp;#34;  # 連結設置 [permalinks]  posts = &amp;#34;/:year/:month/:title/&amp;#34; 第四步，建立第一篇貼文 接著輸入以下指令建立第一篇貼文
-hugo new posts/hello-world.</description>
+# 基本設置 baseURL = &amp;#34;&amp;lt;網址&amp;gt;&amp;#34; title = &amp;#34;&amp;lt;標題&amp;gt;&amp;#34; languageCode = &amp;#34;en-us&amp;#34; # 主題設置 theme=&amp;#34;ananke&amp;#34; # 連結設置 [permalinks] posts = &amp;#34;/:year/:month/:title/&amp;#34; 第四步，建立第一篇貼文 接著輸入以下指令建立第一篇貼文
+hugo new posts/hello-world.md 接著打開Markdown編輯工具(e.g. Visual Studio Code)，寫點簡單的文章並存檔。</description>
     </item>
     
     <item>
@@ -105,10 +106,13 @@ hugo new posts/hello-world.</description>
       <description>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，今天主要要來講整個限流過程是如何運作的。
 Github連結
 主要定義了四個文件
-   文件名 描述     dto.go 定義及宣告Ratelimiter的基本結構與核心Take()方法   err.go 定義了一些錯誤   ratelimiter.go 存放gin middleware中驗證的邏輯   script.go 存放 lua 腳本及 lua 腳本中輸入變數的結構    我們會將上次更新的時間與剩餘令牌的數量儲存在Redis中，而主要更新的邏輯會寫在script.go，這裡會發現整個操作Redis資料庫的邏輯是使用lua script去實作的，把多個操作Redis的指令包在lua script中，Redis會保證lua script中的多個操作會以Atomic的方式進行，這樣才可以保證每個操作之間不會有競爭情況(Race Condition)發生。 參考資料
+文件名 描述 dto.go 定義及宣告Ratelimiter的基本結構與核心Take()方法 err.go 定義了一些錯誤 ratelimiter.go 存放gin middleware中驗證的邏輯 script.go 存放 lua 腳本及 lua 腳本中輸入變數的結構 我們會將上次更新的時間與剩餘令牌的數量儲存在Redis中，而主要更新的邏輯會寫在script.go，這裡會發現整個操作Redis資料庫的邏輯是使用lua script去實作的，把多個操作Redis的指令包在lua script中，Redis會保證lua script中的多個操作會以Atomic的方式進行，這樣才可以保證每個操作之間不會有競爭情況(Race Condition)發生。 參考資料
 程式碼部分 Golang 接下來就進入到程式碼的部分 首先我定義了 RedisRateLimiter 結構
 dto.go
-type RedisRateLimiter struct {  context context.Context  scriptSHA1 string  client *redis.Client } 這邊將RedisRateLimiter的一些必須用到的變數包裝起來，包裝的變數型別包含了Redis客戶端、LUA Script SHA1(後續會使用evalsha調用已經讀進Redis腳本緩存的Lua script)、Goroutine context。</description>
+type RedisRateLimiter struct { context context.Context scriptSHA1 string client *redis.Client } 這邊將RedisRateLimiter的一些必須用到的變數包裝起來，包裝的變數型別包含了Redis客戶端、LUA Script SHA1(後續會使用evalsha調用已經讀進Redis腳本緩存的Lua script)、Goroutine context。
+這個Repository實現的演算法是Token Bucket演算法，不過也可以利用上述定義的結構去實現不同算法，例如：Leaky Bucket。
+dto.go
+type TokenBucketRedisRateLimiter struct { RedisRateLimiter identifier string interval time.Duration maxRequest int } func (r *TokenBucketRedisRateLimiter) Take(request TokenBucketLuaRequest) *LimiterResponse { result, err := r.</description>
     </item>
     
     <item>
@@ -119,9 +123,10 @@ type RedisRateLimiter struct {  context context.Context  scriptSHA1 string  clie
       <guid>https://yurepo.tw/2020/10/spring-security-02-security-context-%E5%BE%9E%E5%93%AA%E4%BE%86/</guid>
       <description>上回我們說了SecurityContextHolder主要在做什麼，這回主要討論的是，SecurityContext到底是何方神聖，它從何而來。
 SecurityContext它作為 Spring Security 核心中的一部分，它的作用可說是非常重要的。我們來看看SecurityContext的源碼。
-public interface SecurityContext extends Serializable { 	/** * 獲取當前已驗證的身分或驗證請求令牌 * * @return the &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no authentication * information is available */ 	Authentication getAuthentication();  	/** * 改變目前已驗證的身分或刪除驗證資料 * * @param authentication the new &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; token, or * &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no further authentication information should be stored */ 	void setAuthentication(Authentication authentication); } 可以看到SecurityContext主要是在管理Authentication的物件，那這個Authentication主要是存放當前使用者的身分(廢話)、存放是否已驗證以及取得目前使用者擁有的權限。
+public interface SecurityContext extends Serializable { /** * 獲取當前已驗證的身分或驗證請求令牌 * * @return the &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no authentication * information is available */ Authentication getAuthentication(); /** * 改變目前已驗證的身分或刪除驗證資料 * * @param authentication the new &amp;lt;code&amp;gt;Authentication&amp;lt;/code&amp;gt; token, or * &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if no further authentication information should be stored */ void setAuthentication(Authentication authentication); } 可以看到SecurityContext主要是在管理Authentication的物件，那這個Authentication主要是存放當前使用者的身分(廢話)、存放是否已驗證以及取得目前使用者擁有的權限。
 那 SecurityContext 從何而來呢? 同個包內的SecurityContextImpl就是它的實現，裡面都是很基本的邏輯，這次就不放了，可從官方GitHub找到相關源代碼。
-那如何在不同request之間保存SecurityContext呢? 在Spring Security主要有兩個在不同request之間保存SecurityContext的策略，這邊簡單介紹一下，兩者都是ServerSecurityContextRepository的實現。</description>
+那如何在不同request之間保存SecurityContext呢? 在Spring Security主要有兩個在不同request之間保存SecurityContext的策略，這邊簡單介紹一下，兩者都是ServerSecurityContextRepository的實現。
+NoOpServerSecurityContextRepository: 很廢，當你叫它保存的時候它不會理你，左耳進右耳出，然後你問他那個東西在哪，它會直接說&amp;quot;我不知道，你有跟我講過嗎?&amp;quot;，通常用於無狀態(Stateless)驗證，例如：httpBasic。 WebSessionServerSecurityContextRepository: 好學生，你叫它保存的時候，它會幫你做三件事，1. 取得當前Session -&amp;gt; 2.</description>
     </item>
     
     <item>
@@ -137,7 +142,7 @@ Context，中文譯作「上下文」，我對於上下文的理解就是物件�
 對於Spring Security來說，SecurityContext就是整個Spring Security應用的上下文。
 而SecurityContextHolder就是單純保存這個上下文而存在的。 在傳統Servlet應用SecurityContextHolder是存在多種保存上下文的策略，比方說GlobalSecurityContextHolderStrategy、InheritableThreadLocalSecurityContextHolderStrategy跟ThreadLocalSecurityContextHolderStrategy，但在ReactiveSecurityContextHolder中，並沒有多種策略去保存SecurityContext，唯一保存上下文的方法就是透過Reactor的上下文。
 以下為個人部分翻譯的源碼：
-public class ReactiveSecurityContextHolder { 	private static final Class&amp;lt;?&amp;gt; SECURITY_CONTEXT_KEY = SecurityContext.class;  	/** * 從 Reactor {@link Context} 取得 {@code Mono&amp;lt;SecurityContext&amp;gt;} * @return 回傳 {@code Mono&amp;lt;SecurityContext&amp;gt;} */ 	public static Mono&amp;lt;SecurityContext&amp;gt; getContext() {  // 從Reactor的上下文中取得SecurityContext 	return Mono.subscriberContext() 	.filter( c -&amp;gt; c.hasKey(SECURITY_CONTEXT_KEY)) 	.flatMap( c-&amp;gt; c.&amp;lt;Mono&amp;lt;SecurityContext&amp;gt;&amp;gt;get(SECURITY_CONTEXT_KEY)); 	}  	/** * 從 Reactor {@link Context} 清除 {@code Mono&amp;lt;SecurityContext&amp;gt;} * @return 清除Reactor上下文，並回傳一個 Mono&amp;lt;Void&amp;gt;，若清除失敗，則報錯。 */ 	public static Function&amp;lt;Context, Context&amp;gt; clearContext() {  // 從Reactor的上下文中刪除SecurityContext 	return context -&amp;gt; context.</description>
+public class ReactiveSecurityContextHolder { private static final Class&amp;lt;?&amp;gt; SECURITY_CONTEXT_KEY = SecurityContext.class; /** * 從 Reactor {@link Context} 取得 {@code Mono&amp;lt;SecurityContext&amp;gt;} * @return 回傳 {@code Mono&amp;lt;SecurityContext&amp;gt;} */ public static Mono&amp;lt;SecurityContext&amp;gt; getContext() { // 從Reactor的上下文中取得SecurityContext return Mono.subscriberContext() .filter( c -&amp;gt; c.hasKey(SECURITY_CONTEXT_KEY)) .flatMap( c-&amp;gt; c.&amp;lt;Mono&amp;lt;SecurityContext&amp;gt;&amp;gt;get(SECURITY_CONTEXT_KEY)); } /** * 從 Reactor {@link Context} 清除 {@code Mono&amp;lt;SecurityContext&amp;gt;} * @return 清除Reactor上下文，並回傳一個 Mono&amp;lt;Void&amp;gt;，若清除失敗，則報錯。 */ public static Function&amp;lt;Context, Context&amp;gt; clearContext() { // 從Reactor的上下文中刪除SecurityContext return context -&amp;gt; context.</description>
     </item>
     
     <item>
@@ -167,8 +172,8 @@ public class ReactiveSecurityContextHolder { 	private static final Class&amp;lt;
       
       <guid>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</guid>
       <description>題目要求是要輸入一個運算式回傳該運算式的結果 有下列規則
- &amp;ldquo;t&amp;rdquo;，代表為 True &amp;ldquo;f&amp;rdquo;，代表為 False &amp;ldquo;!(expr)&amp;quot;，表示將expr得出的布林值反向 &amp;ldquo;&amp;amp;(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做AND &amp;ldquo;|(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做OR  馬上進入程式碼撰寫的部分，主要是以遞迴解決 我的想法應該算蠻差的，效能那些部分都不能強求，所以僅放上來做參考，歡迎底下討論
-class Solution {   companion object{  // 運算子列表  val operator = arrayOf(&amp;#39;!&amp;#39;, &amp;#39;&amp;amp;&amp;#39;, &amp;#39;|&amp;#39;)  }   fun parseBoolExpr(expression: String): Boolean {  // 如果運算式為空，回傳 `False`  if (expression.isEmpty())  return false  return expr(expression)  }   fun expr(expression: String): Boolean{  // 如果運算式的首個元素不包含於運算子列表(!、&amp;amp;、|)，回傳 `False`  if (!operator.contains(expression[0]))  return false   // 取得運算子  val mod = expression[0]  // 檢查運算子後的下一個字元是否為 `(`  val optStart = if(expression[1] == &amp;#39;(&amp;#39;) 1 else throw RuntimeException(&amp;#34;not valid pattern&amp;#34;)  // 檢查運算式的最後一個字源是否為 `)`  val optEnd = if(expression[expression.</description>
+&amp;ldquo;t&amp;rdquo;，代表為 True &amp;ldquo;f&amp;rdquo;，代表為 False &amp;ldquo;!(expr)&amp;quot;，表示將expr得出的布林值反向 &amp;ldquo;&amp;amp;(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做AND &amp;ldquo;|(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做OR 馬上進入程式碼撰寫的部分，主要是以遞迴解決 我的想法應該算蠻差的，效能那些部分都不能強求，所以僅放上來做參考，歡迎底下討論
+class Solution { companion object{ // 運算子列表 val operator = arrayOf(&amp;#39;!&amp;#39;, &amp;#39;&amp;amp;&amp;#39;, &amp;#39;|&amp;#39;) } fun parseBoolExpr(expression: String): Boolean { // 如果運算式為空，回傳 `False` if (expression.isEmpty()) return false return expr(expression) } fun expr(expression: String): Boolean{ // 如果運算式的首個元素不包含於運算子列表(!、&amp;amp;、|)，回傳 `False` if (!operator.contains(expression[0])) return false // 取得運算子 val mod = expression[0] // 檢查運算子後的下一個字元是否為 `(` val optStart = if(expression[1] == &amp;#39;(&amp;#39;) 1 else throw RuntimeException(&amp;#34;not valid pattern&amp;#34;) // 檢查運算式的最後一個字源是否為 `)` val optEnd = if(expression[expression.</description>
     </item>
     
     <item>
@@ -178,19 +183,11 @@ class Solution {   companion object{  // 運算子列表  val operator = arrayOf
       
       <guid>https://yurepo.tw/2020/08/helloworld-jvm/</guid>
       <description>HelloWorld | JVM 因為是部落格上的第一篇，所以想來測試基本語法高亮 首先是Java
-// 測試Java註解 public static void main(string[] args){  System.out.println(&amp;#34;hello world&amp;#34;); } 接下來是Kotlin
-fun main(){  &amp;#34;hello world&amp;#34;.println() }  fun String.println(){  println(this) } 最後基本的C語言好了
-int main(){  printf(&amp;#34;hello world&amp;#34;);  return 0; } </description>
+// 測試Java註解 public static void main(string[] args){ System.out.println(&amp;#34;hello world&amp;#34;); } 接下來是Kotlin
+fun main(){ &amp;#34;hello world&amp;#34;.println() } fun String.println(){ println(this) } 最後基本的C語言好了
+int main(){ printf(&amp;#34;hello world&amp;#34;); return 0; } </description>
     </item>
     
-    <item>
-      <title>搜尋</title>
-      <link>https://yurepo.tw/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yurepo.tw/search/</guid>
-      <description>search</description>
-    </item>
     
   </channel>
 </rss>
