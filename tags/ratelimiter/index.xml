@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ratelimiter on Coding 筆記</title>
-    <link>https://yurepo.tw/tags/ratelimiter/</link>
+    <link>https://yurepo.github.io/tags/ratelimiter/</link>
     <description>Recent content in ratelimiter on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Mar 2021 02:12:14 +0800</lastBuildDate><atom:link href="https://yurepo.tw/tags/ratelimiter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Mar 2021 02:12:14 +0800</lastBuildDate><atom:link href="https://yurepo.github.io/tags/ratelimiter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang Redis Ratelimiter</title>
-      <link>https://yurepo.tw/2021/03/golang-redis-ratelimiter/</link>
+      <link>https://yurepo.github.io/2021/03/golang-redis-ratelimiter/</link>
       <pubDate>Tue, 16 Mar 2021 02:12:14 +0800</pubDate>
       
-      <guid>https://yurepo.tw/2021/03/golang-redis-ratelimiter/</guid>
+      <guid>https://yurepo.github.io/2021/03/golang-redis-ratelimiter/</guid>
       <description>令牌桶演算法實現 前言 這幾天將令牌桶限流演算法使用gin + redis實現了，今天主要要來講整個限流過程是如何運作的。
 Github連結
 主要定義了四個文件

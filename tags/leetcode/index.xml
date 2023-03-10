@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>LeetCode on Coding 筆記</title>
-    <link>https://yurepo.tw/tags/leetcode/</link>
+    <link>https://yurepo.github.io/tags/leetcode/</link>
     <description>Recent content in LeetCode on Coding 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 12 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurepo.tw/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurepo.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>淺談 Heap - 1. 介紹與實作</title>
-      <link>https://yurepo.tw/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/</link>
+      <link>https://yurepo.github.io/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/</link>
       <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurepo.tw/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/</guid>
+      <guid>https://yurepo.github.io/2022/02/%E6%B7%BA%E8%AB%87-heap-1.-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C/</guid>
       <description>淺談 Heap 資料結構 前言 這個系列會紀錄我在 Leetcode 上複習的一些常見的東西。基本上會跟著探索卡的進度走。雖然這系列應該早就在課堂上學會了，但我就豆腐腦，雖然已經理解了，但是只要一過一段時間，記憶就這樣被回收了，我都懷疑我腦袋有一個GC回收器&amp;hellip;
 優先佇列 (Priority Queue) 再講 Heap 之前，要先介紹一下優先佇列 Priority Queue：
 既然優先佇列的名稱裡都有佇列了，那他肯定跟佇列有關係對吧？
@@ -26,10 +26,10 @@ func pull() *Node { if len(unsortedList) == 0 { return nil } maxIndex, highest :
     
     <item>
       <title>Parsing A Boolean Expression</title>
-      <link>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</link>
+      <link>https://yurepo.github.io/2020/08/parsing-a-boolean-expression/</link>
       <pubDate>Mon, 03 Aug 2020 22:02:41 +0000</pubDate>
       
-      <guid>https://yurepo.tw/2020/08/parsing-a-boolean-expression/</guid>
+      <guid>https://yurepo.github.io/2020/08/parsing-a-boolean-expression/</guid>
       <description>題目要求是要輸入一個運算式回傳該運算式的結果 有下列規則
 &amp;ldquo;t&amp;rdquo;，代表為 True &amp;ldquo;f&amp;rdquo;，代表為 False &amp;ldquo;!(expr)&amp;quot;，表示將expr得出的布林值反向 &amp;ldquo;&amp;amp;(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做AND &amp;ldquo;|(expr1,expr2,&amp;hellip;)&amp;quot;，表示將所有expr{num}做OR 馬上進入程式碼撰寫的部分，主要是以遞迴解決 我的想法應該算蠻差的，效能那些部分都不能強求，所以僅放上來做參考，歡迎底下討論
 class Solution { companion object{ // 運算子列表 val operator = arrayOf(&amp;#39;!&amp;#39;, &amp;#39;&amp;amp;&amp;#39;, &amp;#39;|&amp;#39;) } fun parseBoolExpr(expression: String): Boolean { // 如果運算式為空，回傳 `False` if (expression.isEmpty()) return false return expr(expression) } fun expr(expression: String): Boolean{ // 如果運算式的首個元素不包含於運算子列表(!、&amp;amp;、|)，回傳 `False` if (!operator.contains(expression[0])) return false // 取得運算子 val mod = expression[0] // 檢查運算子後的下一個字元是否為 `(` val optStart = if(expression[1] == &amp;#39;(&amp;#39;) 1 else throw RuntimeException(&amp;#34;not valid pattern&amp;#34;) // 檢查運算式的最後一個字源是否為 `)` val optEnd = if(expression[expression.</description>
